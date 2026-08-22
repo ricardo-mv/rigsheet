@@ -55,8 +55,13 @@ multi-effects unit and want it supported, see *What's next* in the in-app manual
 
 ## Deploying
 
-Static hosting, nothing to build. On Cloudflare Pages: connect this repository
-and set the build output directory to the repository root, with no build command.
+Static hosting, nothing to build. `rigsheet.rocks` runs on Cloudflare Pages
+connected to this repository: every commit on `main` publishes on its own, with
+no manual step between what is stored here and what is served. The page you get
+from the site is the `index.html` in this repository — read it, diff it, keep it.
+
+To host it elsewhere, connect the repository and set the build output directory
+to the repository root, with no build command.
 
 ## About the data
 
