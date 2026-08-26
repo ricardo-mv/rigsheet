@@ -1,4 +1,4 @@
-RigSheet — Bulk preset editor for Valeton devices
+RigSheet — Bulk preset editor for multi-effects units
 Copyright (c) 2026 RicardoMV. All rights reserved.
 
 Permission is granted to use this software free of charge, as provided,
@@ -17,11 +17,13 @@ AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
 ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-This software writes files intended to be imported into hardware devices.
-Always keep your original backups. The author accepts no responsibility for
-data loss or for any effect on your equipment.
+This software writes files intended to be imported into hardware devices, and
+can also write directly to the memory of a connected device over USB, replacing
+data already stored on it. Always keep your original backups. The author accepts
+no responsibility for data loss or for any effect on your equipment.
 
 TRADEMARKS
+
 Valeton, GP-200 and all device, amplifier, cabinet and effect names referenced
 are trademarks of their respective owners. RigSheet is an independent tool and
 is not affiliated with, authorised, sponsored or endorsed by Valeton or by any

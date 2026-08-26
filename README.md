@@ -3,18 +3,23 @@
 **Bulk preset editor for multi-effects units.**
 Live at **[rigsheet.rocks](https://rigsheet.rocks)**
 
-Read, edit and reorder all 256 presets of a Valeton GP-200, R, X, JR or LT —
-either by working on `.prst` files or by connecting the pedal over USB.
-Everything runs in the browser: nothing is uploaded, and it works offline.
+Edit, reorder and manage every preset on your unit at once, instead of one at a
+time. It was born on a Valeton GP-200 and today works with that family — GP-200,
+R, X, JR and LT — over `.prst` files or by connecting the pedal over USB.
+
+The hard part of adding a new unit is working out its format. Everything else —
+the table, the bulk edits, the ordering, the export — is already built and tied
+to no brand. Everything runs in the browser: nothing is uploaded, and it works
+offline.
 
 ---
 
 ## Why
 
-256 presets is a lot. Sorting them one at a time was miserable — getting the
-pedal ready before a gig ate hours. All I wanted at first was two things: put
-the night's setlist in order, and set the FX Loop to match the conditions on
-stage.
+My pedal holds 256 presets, and that is a lot. Sorting them one at a time was
+miserable — getting the pedal ready before a gig ate hours. All I wanted at
+first was two things: put the night's setlist in order, and set the FX Loop to
+match the conditions on stage.
 
 The official editor does everything one preset at a time. RigSheet shows them
 as a spreadsheet: pick twenty and change them in one go.
@@ -53,15 +58,17 @@ stored until you press save.
 - **Printing** of the recall sheet, limited to the selection when there is one
 - Eight languages, nine palettes, responsive
 
-## Supported devices
+## Supported so far
 
 | Device | Effects | Footswitches |
 |---|---|---|
 | Valeton GP-200 / R / X / JR | 305 | 8 |
 | Valeton GP-200LT | 277 | 4 |
 
-More devices — and other brands — are planned. If you own a different
-multi-effects unit and want it supported, see *What's next* in the in-app manual.
+That list is where it starts, not where it ends. Adding a manufacturer means
+decoding its preset format — the same work already done once here. If you own a
+different multi-effects unit and want it supported, get in touch: exported
+factory presets and the desktop editor's own files are what make it possible.
 
 The USB features are specific to the GP-200 family, since they depend on that
 pedal's own protocol. File editing has no such limit.
