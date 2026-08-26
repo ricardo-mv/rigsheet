@@ -3,9 +3,9 @@
 **Bulk preset editor for multi-effects units.**
 Live at **[rigsheet.rocks](https://rigsheet.rocks)**
 
-Read, edit and reorder all 256 presets of a Valeton GP-200, R, X, JR or LT by
-working on `.prst` files. Everything runs in the browser: nothing is uploaded,
-and it works offline.
+Read, edit and reorder all 256 presets of a Valeton GP-200, R, X, JR or LT —
+either by working on `.prst` files or by connecting the pedal over USB.
+Everything runs in the browser: nothing is uploaded, and it works offline.
 
 ---
 
@@ -19,19 +19,39 @@ stage.
 The official editor does everything one preset at a time. RigSheet shows them
 as a spreadsheet: pick twenty and change them in one go.
 
+## Two ways to work
+
+**On files.** Export your presets from Valeton's editor, drop them on the page,
+work, and download the result as a dated ZIP. Any modern browser.
+
+**Over USB.** Press *Connect the pedal* and RigSheet fetches its 256 presets into
+the table. Everything then behaves the same, except that changes to the preset
+the pedal currently has loaded are heard straight away. When you are done, only
+what you touched is written back — with a backup downloaded first and every slot
+verified by reading it back afterwards. Needs Chrome or Edge, the browsers that
+implement Web MIDI.
+
+Applying and saving are deliberately separate. Moving a knob goes to the pedal's
+edit buffer: it sounds immediately and touches nothing in memory. Nothing is
+stored until you press save.
+
 ## What it does
 
 - **Full view** of all 256 slots with their effect chain, author, style and notes
 - **Cross-field search** — name, slot, author, note, comment, style, effect and modelled gear
 - **Fine editing** of the 11 modules: effect, on/off and parameters with their real ranges
-- **Bulk editing** of author, style and pedal note
+- **Bulk editing** of author, style, pedal note and **parameters** — the knob is
+  matched by name on each preset, because the same control sits at a different
+  position depending on the amp model
+- **USB connection** — fetch the pedal's 256 presets, hear changes as you make
+  them, and write back only what changed
 - **Personal comments**, unlimited, kept outside the pedal
 - **Bulk FX Loop** — change the wiring scenario of dozens of presets at once
 - **Ordering** — drag, move in blocks, compact, alphabetical or by style
 - **Management** — copy, paste, rename, delete, insert empty slots
 - **Export** to `.prst` in a dated ZIP, to CSV, and to a move plan
-- **Printing** of the recall sheet
-- Seven languages, nine palettes, responsive
+- **Printing** of the recall sheet, limited to the selection when there is one
+- Eight languages, nine palettes, responsive
 
 ## Supported devices
 
@@ -42,6 +62,9 @@ as a spreadsheet: pick twenty and change them in one go.
 
 More devices — and other brands — are planned. If you own a different
 multi-effects unit and want it supported, see *What's next* in the in-app manual.
+
+The USB features are specific to the GP-200 family, since they depend on that
+pedal's own protocol. File editing has no such limit.
 
 ## The files
 
@@ -65,8 +88,8 @@ to the repository root, with no build command.
 
 ## About the data
 
-The `.prst` format was reverse engineered byte by byte and verified against the
-official editor. Each file is 1224 bytes with a checksum recalculated on write.
+The `.prst` format and the GP-200's USB MIDI protocol were both reverse
+engineered byte by byte and verified against the official editor. Each file is 1224 bytes with a checksum recalculated on write.
 The names, parameters, ranges, units and descriptions of all 305 effects are
 generated from the `algorithm.xml` and `description_en.xml` files Valeton ships
 with its desktop editor (editor software 1.8.1, device firmware 1.8.0).
