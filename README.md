@@ -16,10 +16,10 @@ offline.
 
 ## Why
 
-My pedal holds 256 presets, and that is a lot. Sorting them one at a time was
-miserable — getting the pedal ready before a gig ate hours. All I wanted at
-first was two things: put the night's setlist in order, and set the FX Loop to
-match the conditions on stage.
+My pedal holds 256 presets and that is a lot. Sorting them one at a time was
+miserable — getting the pedal ready before a gig took a long time. All I wanted
+at first was two things: build the day's setlist, and set the FX Loop to match
+the conditions on stage.
 
 The official editor does everything one preset at a time. RigSheet shows them
 as a spreadsheet: pick twenty and change them in one go.
@@ -33,8 +33,10 @@ work, and download the result as a dated ZIP. Any modern browser.
 the table. Everything then behaves the same, except that changes to the preset
 the pedal currently has loaded are heard straight away. When you are done, only
 what you touched is written back — with a backup downloaded first and every slot
-verified by reading it back afterwards. Needs Chrome or Edge, the browsers that
-implement Web MIDI.
+verified by reading it back afterwards. Works in Chrome, Edge, Brave, Firefox and
+other browsers that implement Web MIDI; every one of them asks you to approve the
+site's MIDI permission the first time. Safari does not implement Web MIDI, so it
+can only work on files.
 
 Applying and saving are deliberately separate. Moving a knob goes to the pedal's
 edit buffer: it sounds immediately and touches nothing in memory. Nothing is
@@ -45,6 +47,12 @@ stored until you press save.
 - **Full view** of all 256 slots with their effect chain, author, style and notes
 - **Cross-field search** — name, slot, author, note, comment, style, effect and modelled gear
 - **Fine editing** of the 11 modules: effect, on/off and parameters with their real ranges
+- **Official block catalogs** — each block offers exactly the models the official
+  editor does (31 in PRE, for instance). A model sitting in a block that doesn't
+  accept it is flagged and never sent to the pedal: tested on a GP-200, the pedal
+  mutes that preset and the official editor crashes loading it
+- **Sync shown as note values** — with Sync on, Time and Rate read and pick as
+  1/1 … 1/16, the way the official editor shows them
 - **Bulk editing** of author, style, pedal note and **parameters** — the knob is
   matched by name on each preset, because the same control sits at a different
   position depending on the amp model
@@ -54,7 +62,8 @@ stored until you press save.
 - **Bulk FX Loop** — change the wiring scenario of dozens of presets at once
 - **Ordering** — drag, move in blocks, compact, alphabetical or by style
 - **Management** — copy, paste, rename, delete, insert empty slots
-- **Export** to `.prst` in a dated ZIP, to CSV, and to a move plan
+- **Export** to `.prst` in a dated ZIP, to CSV, to an Excel workbook with every
+  parameter of every preset (one row each, autofiltered), and to a move plan
 - **Printing** of the recall sheet, limited to the selection when there is one
 - Eight languages, nine palettes, responsive
 
@@ -99,7 +108,10 @@ The `.prst` format and the GP-200's USB MIDI protocol were both reverse
 engineered byte by byte and verified against the official editor. Each file is 1224 bytes with a checksum recalculated on write.
 The names, parameters, ranges, units and descriptions of all 305 effects are
 generated from the `algorithm.xml` and `description_en.xml` files Valeton ships
-with its desktop editor (editor software 1.8.1, device firmware 1.8.0).
+with its desktop editor (editor software 1.8.1, device firmware 1.8.0). The same
+files define which models each block accepts. The Sync note-value table (1/1 to
+1/16) is not in them: it was worked out by exporting presets from the official
+editor, one position at a time.
 
 ## Licence
 
