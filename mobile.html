@@ -707,18 +707,22 @@ function exportarZip(soloCambios){
 
 /* ── repertorio (temas) ── */
 const SEED=[
- ["RATM","Killing in the Name","Drop D","Tom Morello",["09-A","09-B","09-C",""],""],
- ["Limp Bizkit","My Generation","Standard C#","Wes Borland",["11-A","","",""],"Campanitas en el 5.º traste"],
- ["Limp Bizkit","Break Stuff","Standard C#","Wes Borland",["11-A","","",""],"Fa#m"],
- ["Limp Bizkit","Rollin'","Standard C#","Wes Borland",["11-A","","",""],"Mim - mejor con trémolo"],
- ["Slipknot","Duality","Drop B","Slipknot",["","12-B","",""],"Parte 5.ª y 6.ª al aire"],
- ["Slipknot","Before I Forget","Drop B","Slipknot",["","12-B","",""],""],
- ["Slipknot","Psychosocial","Drop A","Slipknot",["12-A","","",""],""],
- ["SOAD","Toxicity","Drop C","SOAD",["","","",""],""],
- ["SOAD","Aerials","Drop C","SOAD",["","","",""],""],
- ["SOAD","BYOB","Drop C#","SOAD",["","","",""],"Parte 4.ª al aire"],
- ["Alice in Chains","Man in the Box","Drop D","Cantrell",["","","",""],""],
- ["Jamiroquai","Cosmic Girl","Standard","Jamiro Clean",["","","",""],""]
+ ["RATM","Killing in the Name","Drop D","Tom Morello",["09-A","09-B","09-C"],""],
+ ["Limp Bizkit","My Generation","Standard C#","Wes Borland",["11-A"],"Armónicos en el 5to traste"],
+ ["Limp Bizkit","Break Stuff","Standard C#","Wes Borland",["11-A"],"Fa#m"],
+ ["Limp Bizkit","Rollin'","Standard C#","Wes Borland",["11-A"],"Mim - Mejor con trémolo"],
+ ["Slipknot","Duality","Drop B","Slipknot",["","12-B"],"Parte 5ta 6ta aire"],
+ ["Slipknot","Before I Forget","Drop B","Slipknot",["","12-B"],""],
+ ["Slipknot","Psychosocial","Drop A","Slipknot",["12-A"],""],
+ ["SOAD","Toxicity","Drop C","SOAD",["","","","13-D"],""],
+ ["SOAD","Aerials","Drop C","SOAD",["","","","13-D"],""],
+ ["SOAD","BYOB","Drop C#","SOAD",["14-A"],"Parte 4ta aire"],
+ ["Alice in Chains","Man in the Box","Drop D","Cantrell",["","","28-C"],""],
+ ["Jamiroquai","Cosmic Girl","Standard","Jamiro Clean",["","","30-C"],""],
+ ["The Strokes","You Only Live Once","Standard","Yolo",["39-A","39-B","39-C"],""],
+ ["Los Bunkers","Quien Fuera","Standard","Bunkers",["40-A"],""],
+ ["Chancho en Piedra","Discojapi","Standard","Chancho",["38-A"],""],
+ ["Linkin Park","In the End","Drop Db","Linkin",["","36-B"],"Armónicos 2-5 3-5 2-7 1-11"]
 ].map((r,i)=>({id:"T"+String(i+1).padStart(4,"0"),artista:r[0],cancion:r[1],afinacion:r[2],preset:r[3],slots:r[4],obs:r[5],tags:""}));
 let TEMAS=SEED;
 try{const s=localStorage.getItem("rs_temas"); if(s){const v=JSON.parse(s); if(Array.isArray(v))TEMAS=v;}}catch(e){}
@@ -1060,7 +1064,7 @@ function vPresets(){
 
 
 /* afinaciones en orden musical: estándar de agudo a grave, luego drop de agudo a grave */
-const TORD=["standard","eb standard","d standard","standard c#","std c#","c# standard","c standard","b standard","drop d","drop c#","drop c","drop b","drop a#","drop a"];
+const TORD=["standard","eb standard","d standard","standard c#","std c#","c# standard","c standard","b standard","drop d","drop c#","drop db","drop c","drop b","drop a#","drop a"];
 const tRank=a=>{const k=TORD.indexOf(String(a).toLowerCase().trim());return k<0?100:k};
 function ordenTemas(){
   const idx=TEMAS.map((_,i)=>i), c=(x,y)=>String(x||"").localeCompare(String(y||""),"es",{sensitivity:"base"});
