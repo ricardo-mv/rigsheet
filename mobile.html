@@ -108,6 +108,95 @@ body.notitles .tophead{display:none}
 .volc button:active{background:var(--line)}
 .volc b{min-width:30px;text-align:center;font-size:15px;color:var(--accent-text)}
 .ctrlb{border-style:dashed}
+.tnsheet{gap:14px;align-items:stretch}
+.tnhead{display:flex;align-items:center;gap:10px}
+.tnaf{flex:1;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surf2);padding:0 12px;font-size:18px;font-weight:700;color:var(--text)}
+.tnmsg{text-align:center;font-size:24px;font-weight:700;min-height:32px}
+.tncirc{align-self:center;width:min(58vw,230px);aspect-ratio:1;border-radius:50%;background:var(--surf2);color:var(--muted);display:flex;align-items:center;justify-content:center;transition:background .15s,color .15s}
+.tncirc span{font-size:min(30vw,120px);font-weight:500;line-height:1}
+.tncirc.cerca{background:var(--accent-soft);color:var(--accent-text)}
+.tncirc.lejos{background:var(--coral-soft);color:var(--coral)}
+.tncirc.ok{background:var(--ok);color:#0B1A12}
+.tnsub{text-align:center;font-size:12px;color:var(--muted);min-height:16px}
+.tnstrs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.tnstrs button{aspect-ratio:1;border-radius:50%;background:var(--surf2);font-size:18px;font-weight:600;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;position:relative}
+.tnstrs small{font-size:9px;color:var(--muted);margin-top:2px;font-weight:400}
+.tnstrs button.act{background:var(--accent);color:var(--on-accent)}
+.tnstrs button.act small{color:var(--on-accent)}
+.tnstrs button.okd::after{content:"✓";position:absolute;top:-2px;right:-2px;width:16px;height:16px;border-radius:8px;background:var(--ok);color:#0B1A12;font-size:10px;display:flex;align-items:center;justify-content:center}
+.tnstrs button.lock{outline:2px solid var(--accent);outline-offset:2px}
+.tnview{display:flex;border:1px solid var(--line);border-radius:12px;overflow:hidden;flex-shrink:0}
+.tnview button{width:40px;height:42px;display:flex;align-items:center;justify-content:center;color:var(--muted);background:var(--surf2)}
+.tnview button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
+.tnarc{width:100%;max-width:340px;align-self:center}
+.tnarc path[data-seg]{fill:none;stroke:var(--line);stroke-width:13;stroke-linecap:round;transition:stroke .1s}
+.tnarc path.s-ok{stroke:var(--ok)}
+.tnarc path.s-am{stroke:#F5C518}
+.tnarc path.s-na{stroke:#F08A24}
+.tnarc path.s-ro{stroke:#D93A2B}
+.tnarc .tnmark{fill:var(--muted)}
+.tnarc .tnfs{fill:var(--muted);font-size:22px}
+.tnarc .tnbig{fill:var(--text);font-size:76px;font-weight:700}
+.tnarc .tnoct{font-size:26px;font-weight:500;fill:var(--muted)}
+.tnpos{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;background:var(--surf2)}
+.tnpos>span:first-child{flex:1;display:flex;flex-direction:column;gap:2px;font-size:13px}
+.tnpos small{font-size:11px;color:var(--muted)}
+.tnpos .volc{background:var(--surf)}
+.tntit{flex:1;font-size:18px;font-weight:700}
+.tnhint{text-align:center;font-size:11px;color:var(--muted)}
+.tnhold{display:flex;justify-content:center;gap:5px}
+.tnhold i{width:6px;height:6px;border-radius:3px;background:var(--line)}
+.tnhold i.on{background:var(--ok)}
+.acc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:14px 16px 0}
+.acc .btn{padding:0 6px;font-size:13px;gap:6px}
+.modp{display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:1.45;background:var(--accent-soft);color:var(--text);border-radius:12px;padding:10px 12px}
+.expw{display:flex;gap:8px;align-items:flex-start;font-size:12px;line-height:1.4;color:var(--text);background:var(--coral-soft);border-radius:10px;padding:8px 10px;margin:-2px 0 4px}
+.expw svg{flex-shrink:0;margin-top:1px;color:var(--coral)}
+.vtitle{margin:4px 20px 12px;font-size:26px;font-weight:700;letter-spacing:-.3px}
+.aftab{margin:12px 16px 0;border-radius:18px;background:var(--surf);border:1px solid var(--line);overflow:hidden}
+.afh,.afr{display:grid;grid-template-columns:44px 1fr 1fr 64px;gap:6px;align-items:center;padding:0 12px}
+.afh{height:34px;font-size:11px;color:var(--muted);border-bottom:1px solid var(--line)}
+.afh span:last-child,.afr span:last-child{text-align:right}
+.afr{width:100%;min-height:44px;font-size:13px;text-align:left;border-bottom:1px solid var(--line)}
+.afr:last-child{border-bottom:none}
+.afr.sel{background:var(--accent-soft)}
+.afr .mono{font-size:12px}
+.afr .nc{font-family:inherit;font-size:11px;color:var(--faint)}
+.cuerdas{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.cuerdas span{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;border-radius:12px;background:var(--surf2)}
+.cuerdas small{font-size:10px;color:var(--muted)}
+.cuerdas b{font-size:16px;color:var(--accent-text)}
+.hbrow{display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:12px}
+.paso{display:flex;gap:10px;align-items:flex-start;font-size:14px}
+.paso .pn{width:22px;height:22px;border-radius:11px;background:var(--accent);color:var(--on-accent);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dondes{display:flex;flex-direction:column;gap:8px;padding-left:32px}
+.dondes .btn{justify-content:flex-start;text-align:left;padding:8px 14px}
+.dondes small{font-size:11px;font-weight:400;opacity:.8}
+.afsel{display:flex;gap:8px;padding:0 16px}
+.fila2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.fila2 .btn{padding:0 8px;font-size:13px}
+.tnins select{height:40px;font-size:14px}
+.insel{height:44px}
+.afsel select{flex:1;height:46px;font-size:15px}
+.afrow{width:100%;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:12px;row-gap:2px;padding:10px 14px;border-bottom:1px solid var(--line);text-align:left}
+.afrow:last-child{border-bottom:none}
+.afrow.sel{background:var(--accent-soft)}
+.afrow .an{font-weight:600;font-size:14px}
+.afrow .as{grid-column:1 / 3;font-size:13px;color:var(--text)}
+.afrow .ad{justify-self:end;font-size:12px;color:var(--muted)}
+.afrow .ad b{color:var(--violet)}
+.hbtabs{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px}
+.hbtabs button{min-width:72px;flex:1;height:64px;border-radius:16px;border:1px solid var(--line);background:var(--surf);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.hbtabs button b{font-family:var(--mono);font-size:20px}
+.hbtabs button span{font-size:11px;color:var(--muted)}
+.hbtabs button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.hbtabs button[aria-pressed="true"] b{color:var(--accent-text)}
+.tnbar{position:relative;height:28px;border-radius:14px;background:var(--surf2);overflow:hidden}
+.tnmid{position:absolute;left:calc(50% - 1px);top:0;bottom:0;width:2px;background:var(--line)}
+.tnneedle{position:absolute;left:50%;top:4px;bottom:4px;width:6px;margin-left:-3px;border-radius:3px;background:var(--accent);transition:left .08s linear}
+.fix{border-radius:12px;border:1px solid var(--coral);background:var(--coral-soft);padding:10px 12px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text)}
+.fixb{display:flex;flex-direction:column;gap:6px}
+.fixb .btn{min-height:40px;font-size:13px;font-weight:500;justify-content:flex-start;text-align:left}
 .vol{display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:12px}
 .vol .vl{flex:1;font-size:13px;color:var(--muted)}
 .vol .vv{min-width:44px;text-align:center;font-size:22px;font-weight:700;color:var(--accent-text)}
@@ -175,11 +264,11 @@ textarea{width:100%;min-height:76px;border-radius:12px;border:1px solid var(--li
 <div class="app">
   <header class="top">
     <div class="brand">RIGSHEET</div>
-    <div style="display:flex;gap:8px;align-items:center"><button class="sq" id="btnBuscar" aria-label="Buscar preset" style="width:38px;height:38px;border-radius:19px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button><button class="pill" id="conn"><span class="dot"></span><span>Sin pedal</span></button></div>
+    <div style="display:flex;gap:8px;align-items:center"><button class="sq" id="btnWake" aria-label="Mantener pantalla encendida" aria-pressed="false" style="width:38px;height:38px;border-radius:19px"></button><button class="sq" id="btnTuner" aria-label="Afinador" style="width:38px;height:38px;border-radius:19px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2v8a3 3 0 006 0V2M12 13v9M9 22h6"/></svg></button><button class="sq" id="btnBuscar" aria-label="Buscar preset" style="width:38px;height:38px;border-radius:19px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button><button class="pill" id="conn"><span class="dot"></span><span>Sin pedal</span></button></div>
   </header>
   <div class="status" id="status" role="status" aria-live="polite"></div>
   <main id="view"></main>
-  <p class="foot">RigSheet Mobile · beta 0.5 · © 2026 RicardoMV · Tus presets no salen del teléfono.<br>Valeton y GP-200 son marcas de sus dueños. Guarda siempre tu respaldo antes de escribir en el pedal.</p>
+  <p class="foot">RigSheet Mobile · beta 1.5 · © 2026 RicardoMV · Tus presets no salen del teléfono.<br>Valeton y GP-200 son marcas de sus dueños. Guarda siempre tu respaldo antes de escribir en el pedal.</p>
 </div>
 <nav class="tabbar" aria-label="Navegación principal"><div class="in" id="tabs"></div></nav>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -531,6 +620,49 @@ function rxEntraM(ev){
   rxEntra(ev);
 }
 
+/* Pantalla encendida mientras la app está abierta (Screen Wake Lock).
+   El sistema la suelta al cambiar de app o bloquear; se vuelve a pedir al volver. */
+let WAKE=true,WL=null,WLP=false;
+try{WAKE=localStorage.getItem("rs_m_wake")!=="0"}catch(e){}
+const wakeOK=()=>"wakeLock" in navigator;
+async function wakeOn(){
+  if(!wakeOK()||!WAKE||WL||WLP||document.visibilityState!=="visible")return;
+  WLP=true;
+  try{WL=await navigator.wakeLock.request("screen");WL.addEventListener("release",()=>{WL=null;pintarWake()});}catch(e){WL=null}
+  WLP=false;pintarWake();
+}
+function wakeOff(){if(WL){WL.release().catch(()=>{});WL=null}pintarWake()}
+function pintarWake(){
+  const b=document.getElementById("btnWake");if(!b)return;
+  if(!wakeOK()){b.style.display="none";return}
+  const on=!!WL;
+  b.setAttribute("aria-pressed",String(on));
+  b.style.color=on?"var(--accent-text)":"var(--muted)";
+  b.style.background=on?"var(--accent-soft)":"var(--surf2)";
+  b.title=on?"Pantalla siempre encendida: activada":"Pantalla siempre encendida: desactivada";
+  b.innerHTML='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">'+(on?'<rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 6h4M10 10h4M10 14h4"/><path d="M3 9v6M21 9v6"/>':'<rect x="7" y="2" width="10" height="20" rx="2"/><path d="M4 4l16 16"/>')+'</svg>';
+}
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")wakeOn()});
+document.addEventListener("pointerdown",()=>{if(WAKE&&!WL)wakeOn()},{passive:true});
+
+/* Cambio de modelo en vivo. Capturado del editor oficial de Valeton con
+   USBPcap (preset 03-C: PRE COMP→Hammy→Harmonizer 1, MOD G-Chorus→Detune→
+   C-Chorus). El editor antepone "00 00 00 04 00 00 00 <preset>" y luego
+     00 16 00 08 | 00 <bloque> 00 00 00 | <código del modelo, uint32 LE>
+   El pedal responde con el mismo mensaje y el código, y el efecto cambia. */
+function aplicarModelo(p,mod,code){
+  if(!esActivo(p))return false;
+  const m=MODULES.indexOf(mod),i=idxSlot(p.slot);if(m<0||i<0)return false;
+  return usbEnviar(usbNib([0x00,0x00,0x00,0x04,0x00,0x00,0x00,i&0xFF,
+    0x00,0x16,0x00,0x08,0x00,m,0x00,0x00,0x00,code&0xFF,(code>>>8)&0xFF,(code>>>16)&0xFF,(code>>>24)&0xFF]));
+}
+/* manda un bloque completo al búfer: modelo, perillas y encendido */
+function enviarBloqueVivo(p,mod){
+  const b=p.blocks.find(x=>x.mod===mod);if(!b||!esActivo(p))return;
+  aplicarModelo(p,mod,b.code);
+  setTimeout(()=>{if(!esActivo(p))return;if(b.fx)b.fx.p.forEach(d=>aplicarParam(p,mod,d.i,b.vals[d.i]));aplicarBloque(p,mod,b.on);},90);
+}
+
 /* ═══ RigSheet Mobile ═══════════════════════════════════════
    Misma regla que la versión de escritorio:
      aplicar  → búfer de edición, suena al instante, no queda grabado
@@ -569,7 +701,10 @@ const I={
   table:'<path d="M3 5h18v14H3zM3 10h18M9 5v14"/>',
   help:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 015 0c0 2-2.5 2-2.5 4M12 17h.01"/>',
   moon:'<path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/>',
-  sync:'<path d="M20 12a8 8 0 01-14 5.3M4 12a8 8 0 0114-5.3"/><path d="M18 2v5h-5M6 22v-5h5"/>'
+  sync:'<path d="M20 12a8 8 0 01-14 5.3M4 12a8 8 0 0114-5.3"/><path d="M18 2v5h-5M6 22v-5h5"/>',
+  contrast:'<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 010 18z" fill="currentColor"/>',
+  phones:'<path d="M4 15v-3a8 8 0 0116 0v3M3 14h5v7H3zM16 14h5v7h-5z"/>',
+  fork:'<path d="M9 2v8a3 3 0 006 0V2M12 13v9M9 22h6"/>'
 };
 const ic=(n,s,sw)=>'<svg width="'+(s||22)+'" height="'+(s||22)+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="'+(sw||2)+'" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+I[n]+'</svg>';
 
@@ -636,19 +771,14 @@ function usbTraer(){
 }
 function usbGuardar(){
   if(!USB.on){alert("Conecta el pedal para guardar en su memoria. Sin pedal puedes descargar los cambios como ZIP.");return}
-  const pend=PRESETS.filter(p=>p.dirty&&idxSlot(p.slot)>=0).map(p=>({slot:idxSlot(p.slot),p,nuevo:buildPrst(p),viejo:new Uint8Array(p.raw),destino:p.slot}));
+  const pend=PRESETS.filter(p=>p.dirty&&idxSlot(p.slot)>=0).map(p=>({slot:idxSlot(p.slot),p,nuevo:buildPrst(p),viejo:new Uint8Array(p.rawOrig||p.raw),destino:p.slot}));
   if(!pend.length){toast("No hay cambios para guardar");return}
   const conMalos=pend.filter(x=>malos(x.p).length);
   if(conMalos.length){alert("Estos presets tienen un modelo en un bloque que no lo acepta; el pedal los dejaría mudos. Corrígelos antes de guardar:\n\n"+conMalos.slice(0,10).map(x=>"  "+x.destino+"  "+x.p.name+" — "+malos(x.p).join(", ")).join("\n"));return}
-  if(!confirm("Guardar "+pend.length+" preset(s) en la memoria del pedal:\n\n"+pend.slice(0,10).map(x=>"  "+x.destino+"  "+x.p.name).join("\n")+(pend.length>10?"\n  …":"")))return;
-  if(confirm("¿Descargar primero un respaldo de esos slots tal como están ahora en el pedal?")){
-    try{save(zip(pend.map(x=>({name:x.p.slot+"_antes.prst",data:x.viejo}))),stamp()+"_respaldo-antes-de-guardar.zip");}
-    catch(e){if(!confirm("No se pudo crear el respaldo. ¿Guardar igual?"))return}
-    if(!confirm("Cuando termine la descarga del respaldo, toca Aceptar para escribir en el pedal."))return;
-  }
+  /* guardado directo: sin confirmación ni respaldo previo; se verifica cada slot */
   CORTA=false;let k=0,ok=0;
   (function paso(){
-    if(CORTA||k>=pend.length){usbPintar();alert("Guardados y verificados: "+ok+" de "+pend.length+".");return}
+    if(CORTA||k>=pend.length){usbPintar();toast(ok===pend.length?(ok===1?pend[0].p.slot+" guardado":ok+" presets guardados"):"Guardados "+ok+" de "+pend.length);return}
     const x=pend[k];
     usbPintar("Guardando "+x.p.slot+"…");
     const ms=msgGuardar(x.nuevo,x.slot);let j=0;
@@ -669,7 +799,7 @@ function usbGuardar(){
               const dif=[];for(let q=46;q<1216;q++)if(e2[q]!==des[q])dif.push(q);
               if(dif.length){CORTA=true;
                 alert("No se pudo verificar "+x.p.slot+": "+dif.length+" byte(s) distintos.\n\n"+dif.slice(0,8).map(q=>"@"+q+": esperaba "+e2[q]+", había "+des[q]).join("\n"));}
-              else{ok++;x.p.raw=des.buffer.slice(0);x.p.dirty=false;}
+              else{ok++;x.p.raw=des.buffer.slice(0);delete x.p.rawOrig;x.p.modPend=null;x.p.dirty=false;x.p.volTocado=false;}
               k++;setTimeout(paso,60);return;
             }
             if(esp===0)usbEnviar(pedirPreset(x.slot));
@@ -684,7 +814,7 @@ function usbGuardar(){
   })();
 }
 function descartar(p){
-  const fresh=parse(p.raw,p.file);fresh.slot=p.slot;
+  const fresh=parse(p.rawOrig||p.raw,p.file);fresh.slot=p.slot;
   const i=PRESETS.indexOf(p);PRESETS[i]=fresh;
   if(USB.on&&fresh.slot===USB.activo)recargarPedal(fresh.slot);
 }
@@ -804,7 +934,7 @@ function importarComentarios(txt){
 }
 
 /* ── estado de vistas ── */
-const S={pq:"",pchip:"Todos",tq:"",tune:"Todas",open:-1,editNote:false,editMeta:false,tsort:"cancion",shuf:null};
+const S={afSel:"",afFam:"std",afDest:"",afBase:"copia",pq:"",pchip:"Todos",tq:"",tune:"Todas",open:-1,editNote:false,editMeta:false,tsort:"cancion",shuf:null};
 const ROUTES=["inicio","pedal","presets","repertorio","ayuda"];
 const route=()=>{const h=(location.hash||"").slice(1);return ROUTES.includes(h)?h:(h==="temas"?"repertorio":"inicio")};
 const go=r=>{if(location.hash!=="#"+r)location.hash=r;else render();};
@@ -849,29 +979,35 @@ function vInicio(){
       '<div class="stats"><div class="stat"><b>'+PRESETS.length+'</b><span>total</span></div><div class="stat"><b>'+cnt("mio")+'</b><span>con autor</span></div><div class="stat"><b>'+cnt("sinfirmar")+'</b><span>sin autor</span></div><div class="stat"><b style="color:var(--ok)">'+cnt("vacio")+'</b><span>libres</span></div></div>';
     if(n)h+='<div class="card" style="margin-top:12px;padding:14px 16px;display:flex;align-items:center;gap:12px"><span class="badge dirty">'+n+' sin guardar</span><span style="flex:1;font-size:13px;color:var(--muted)">'+(USB.on?'Suenan pero aún no están en la memoria del pedal.':'Descárgalos como ZIP o conecta el pedal.')+'</span><button class="btn btn-primary" style="min-height:40px" data-act="'+(USB.on?'saveAll':'zipDirty')+'">'+(USB.on?'Guardar':'ZIP')+'</button></div>';
   }
+  const n2=dirtyN();
   const apps=[
-    [USB.on?'Desconectar':'Conectar','plug','var(--green-soft)','var(--ok)','connect'],
-    ['Abrir .prst','folder','var(--accent-soft)','var(--accent-text)','open'],
-    ['Releer pedal','sync','var(--green-soft)','var(--ok)','reload'],
-    ['Buscar','search','var(--cyan-soft)','var(--cyan)','search'],
-    ['Guardar en pedal','save','var(--accent-soft)','var(--accent-text)','saveAll'],
-    ['Exportar todo','archive','var(--cyan-soft)','var(--cyan)','zipFull'],
+    [USB.on?'Desconectar pedal':'Conectar pedal','plug','var(--green-soft)','var(--ok)','connect'],
+    ['Releer el pedal','sync','var(--green-soft)','var(--ok)','reload'],
+    ['Abrir archivos .prst','folder','var(--accent-soft)','var(--accent-text)','open'],
+    [n2?'Guardar '+n2+' cambio'+(n2>1?'s':'')+' en el pedal':'Guardar cambios en el pedal','save','var(--accent-soft)','var(--accent-text)','saveAll'],
+    ['Descartar todos los cambios','undo','var(--coral-soft)','var(--coral)','discardAll'],
+    ['Respaldo completo (ZIP)','archive','var(--cyan-soft)','var(--cyan)','zipFull'],
     ['Importar comentarios','note','var(--violet-soft)','var(--violet)','jsonIn'],
-    ['Solo presets ZIP','folder','var(--cyan-soft)','var(--cyan)','zipAll'],
     ['Importar repertorio','table','var(--violet-soft)','var(--violet)','csvIn'],
     ['Exportar repertorio','export','var(--violet-soft)','var(--violet)','csvOut'],
-    ['Cambios ZIP','export','var(--coral-soft)','var(--coral)','zipDirty'],
-    ['Descartar todo','undo','var(--coral-soft)','var(--coral)','discardAll'],
-    ['Claro / oscuro','moon','var(--surf2)','var(--muted)','theme'],
-    ['Afinación virtual','music','var(--violet-soft)','var(--violet)','afv'],
-    [TITULOS?'Ocultar títulos':'Mostrar títulos','table','var(--surf2)','var(--muted)','titles'],
-    ['Ayuda','help','var(--surf2)','var(--muted)','help']
+    ['Tema claro / oscuro','contrast','var(--surf2)','var(--muted)','theme'],
+    [TITULOS?'Ocultar títulos':'Mostrar títulos','table','var(--surf2)','var(--muted)','titles']
   ];
+
   h+='<div class="section">Herramientas</div><div class="apps">'+apps.map(a=>'<button class="app-i" data-act="'+a[4]+'"><span class="ic" style="background:'+a[2]+';color:'+a[3]+'">'+ic(a[1],26,1.8)+'</span>'+a[0]+'</button>').join("")+'</div>';
   return h;
 }
 
+/* ¿esta perilla la maneja un pedal de expresión? Si es así, el pedal usa
+   la posición del EXP entre "a" y "b" e ignora el valor guardado. */
+function expDe(p,mod,pi){const m=MODULES.indexOf(mod);return p&&p.exp?p.exp.filter(e=>e.mod===m&&e.par===pi):[]}
+const expNom=e=>(EXPIDS.find(x=>x[0]===e.id)||[0,"EXP"])[1].split(" · ")[0];
+function expAviso(p,b,d){const es=expDe(p,b.mod,d.i);if(!es.length)return "";
+  return '<div class="expw">'+ic('pedal',14)+'<span><b>'+esc(d.n)+'</b> la controla '+es.map(e=>esc(expNom(e))+' ('+fmt(e.a)+' → '+fmt(e.b)+')').join(" y ")+'. Mientras esté asignada, el pedal usa la posición del EXP y no este valor: mueve el pedal de expresión o quita la asignación.</span></div>';}
 function paramRow(b,d,bi){
+  const r=paramRow0(b,d,bi);return r+expAviso(PRESETS[CUR],b,d);
+}
+function paramRow0(b,d,bi){
   const v=b.vals[d.i], id="p"+bi+"_"+d.i;
   if(conSync(b,d)){
     const k=Math.min(SYNC_DIV.length-1,Math.max(0,Math.round(v)));
@@ -889,7 +1025,7 @@ function eqPanel(b,bi){
   return '<div class="eq" style="grid-template-columns:repeat('+ps.length+',minmax(0,1fr))">'+ps.map(d=>{
     const v=b.vals[d.i],id="p"+bi+"_"+d.i;
     return '<div class="eqb"><span class="pv" id="v'+id+'">'+fmt(v)+'</span><input type="range" class="vert" id="'+id+'" data-par="'+d.i+'" min="'+d.mn+'" max="'+d.mx+'" step="'+(d.st||1)+'" value="'+v+'" aria-label="'+esc(d.n)+'"><label for="'+id+'">'+esc(d.n.replace("Volume","Vol"))+'</label></div>';
-  }).join("")+'</div>'+b.fx.p.filter(d=>d.o).map(d=>paramRow(b,d,bi)).join("");
+  }).join("")+'</div>'+b.fx.p.filter(d=>!d.o).map(d=>expAviso(PRESETS[CUR],b,d)).join("")+b.fx.p.filter(d=>d.o).map(d=>paramRow(b,d,bi)).join("");
 }
 
 /* Cadena en el orden real del preset (bytes 148–158), no en el orden fijo de módulos */
@@ -994,7 +1130,7 @@ function vPedal(){
   }
   h+='<div class="metarow">'+
     (S.editMeta?'':'<button class="tag" data-act="metaEdit" aria-label="Editar nombre, autor, estilo y nota">'+esc(p.author||"sin autor")+' · '+esc(styleName(p.style))+'&nbsp;'+ic('edit',13)+'</button>')+
-    (live?'<span class="badge live">Suena</span>':'')+(p.dirty?'<span class="badge dirty">Sin guardar</span>':'')+(malos(p).length?'<span class="badge warn">Modelo fuera de bloque</span>':'')+
+    (live?(p.modPend&&Object.keys(p.modPend).length?'<span class="badge warn">Modelo sin escribir</span>':'<span class="badge live">Suena</span>'):'')+(p.dirty?'<span class="badge dirty">Sin guardar</span>':'')+(malos(p).length?'<span class="badge warn">Modelo fuera de bloque</span>':'')+
     '<span class="volc" title="Patch VOL"><span class="vl">VOL</span><button data-vol="-1" aria-label="Bajar Patch VOL">'+ic('minus',16)+'</button><b class="mono" id="volv" aria-live="polite">'+p.vol+'</b><button data-vol="1" aria-label="Subir Patch VOL">'+ic('plus',16)+'</button></span>'+
   '</div>'+
   (USB.on&&!live?'<button class="btn btn-ghost" style="min-height:40px" data-act="loadCur">'+ic('play',16)+'Cargar '+esc(p.slot)+' en el pedal</button>':'')+
@@ -1008,21 +1144,35 @@ function vPedal(){
     h+='<div style="display:flex;align-items:center;gap:10px"><span class="mono" style="font-size:12px;font-weight:700;color:var(--accent-text);width:36px">'+b.mod+'</span>'+
       '<label class="sr" for="mdl">Modelo del bloque '+b.mod+'</label><select id="mdl" class="selectfull" style="flex:1">'+opts+'</select>'+
       '<button class="switch" role="switch" aria-checked="'+b.on+'" aria-label="Bloque '+b.mod+' encendido" data-act="toggleSel"></button></div>'+
+      (p.modPend&&p.modPend[b.mod]?'<div class="modp"><span>El pedal todavía tiene el modelo anterior en este bloque: el cambio de modelo no se puede enviar en vivo.'+(USB.on?' Para oírlo, RigSheet escribe '+esc(p.slot)+' en el pedal (unos segundos).':' Se oirá al guardar en el pedal.')+'</span>'+(USB.on?'<button class="btn btn-primary" style="min-height:42px" data-act="escucharYa">'+ic('play',16)+'Escuchar ahora · escribir '+esc(p.slot)+'</button>':'')+'</div>':'')+
+      (DESHACER&&DESHACER.slot===p.slot?'<button class="btn btn-ghost" style="min-height:40px" data-act="restaurar">'+ic('undo',16)+'Restaurar '+esc(p.slot)+' como estaba</button>':'')+
       (fueraCat(b)?'<div style="font-size:12px;color:var(--bad)">Este modelo no pertenece al bloque '+b.mod+'. El pedal dejaría mudo el preset: elige otro antes de guardar.</div>':'')+
       (b.fx?(b.mod==="EQ"?eqPanel(b,bi):b.fx.p.map(d=>paramRow(b,d,bi)).join("")):'<div style="font-size:13px;color:var(--muted)">Modelo desconocido.</div>')+
-      (b.fx&&b.fx.n==="Hammy"?'<button class="btn btn-ghost" style="min-height:42px;margin-top:4px" data-act="afvNew">'+ic('music',16)+'Guardar como afinación virtual</button>':'');
+      '';
   }
   h+='</div>'+
   '<div class="section">Comentario</div><div class="card" style="padding:12px 14px;display:flex;flex-direction:column;gap:10px">'+
     (S.editNote?'<label class="sr" for="cmt">Comentario del preset</label><textarea id="cmt" placeholder="Ayudamemoria: canción, guitarra, pedales externos…">'+esc(note)+'</textarea><div style="display:flex;gap:8px"><button class="btn btn-ghost" style="flex:1;min-height:42px" data-act="noteCancel">Cancelar</button><button class="btn btn-primary" style="flex:1;min-height:42px" data-act="noteSave">Guardar comentario</button></div>'
      :(note?'<div class="note">'+esc(note)+'</div>':'<div style="font-size:13px;color:var(--muted)">Sin comentario. Es un ayudamemoria largo que queda en este teléfono; la nota corta del pedal se edita arriba.</div>')+'<button class="btn btn-ghost" style="min-height:40px" data-act="noteEdit">'+ic('edit',16)+(note?'Editar':'Agregar')+' comentario</button>')+
   '</div>'+
-  '<div style="display:flex;gap:8px;padding:14px 16px 0">'+
-    '<button class="btn btn-ghost" style="flex:1" data-act="discardCur"'+(p.dirty?'':' disabled')+'>'+ic('undo',18)+'Descartar</button>'+
-    (USB.on?'<button class="btn btn-primary" style="flex:1" data-act="saveAll"'+(dirtyN()?'':' disabled')+'>'+ic('save',18)+'Guardar en pedal'+(dirtyN()>1?' ('+dirtyN()+')':'')+'</button>'
-           :'<button class="btn btn-primary" style="flex:1" data-act="zipDirty"'+(dirtyN()?'':' disabled')+'>'+ic('save',18)+'Descargar cambios</button>')+
+  '<div class="acc">'+
+    '<button class="btn btn-ghost" data-act="discardCur"'+(p.dirty?'':' disabled')+'>'+ic('undo',18)+'Descartar</button>'+
+    '<button class="btn btn-danger" data-act="borrarCur"'+(p.kind==="vacio"&&!p.dirty?' disabled':'')+'>'+ic('trash',18)+'Borrar</button>'+
+    (USB.on?'<button class="btn btn-primary" data-act="saveAll"'+(dirtyN()?'':' disabled')+'>'+ic('save',18)+'Guardar'+(dirtyN()>1?' ('+dirtyN()+')':'')+'</button>'
+           :'<button class="btn btn-primary" data-act="zipDirty"'+(dirtyN()?'':' disabled')+'>'+ic('save',18)+'ZIP</button>')+
   '</div>';
   return h;
+}
+/* Borrar: deja el slot vacío y, con el pedal conectado, lo escribe de una vez
+   (sin respaldo; se verifica igual que cualquier guardado) */
+function borrarPreset(p){
+  const k=PRESETS.indexOf(p);if(k<0)return;
+  const n=parse(b64buf(BLANK_B64),p.slot+".prst");
+  n.slot=p.slot;n.file=p.file;n.rawOrig=p.rawOrig||p.raw;n.dirty=true;
+  PRESETS[k]=n;S.editNote=false;S.editMeta=false;
+  if(!USB.on){render(true);toast(p.slot+" vacío · descarga los cambios para llevarlo al pedal");return}
+  render(true);
+  guardarUno(n,ok=>{render(true);toast(ok?p.slot+" borrado":"No se pudo borrar "+p.slot)});
 }
 
 function vPresets(){
@@ -1098,8 +1248,7 @@ function vTemas(){
     if(open){
       h+='<div style="padding:0 14px 14px;display:flex;flex-direction:column;gap:10px">'+
         (t.obs?'<div class="note">'+esc(t.obs)+'</div>':'<div style="font-size:13px;color:var(--muted)">Sin nota.</div>');
-      const mism=sl.map(x=>{const p=PRESETS.find(pp=>pp.slot===x);return p&&t.preset&&p.name.toLowerCase().indexOf(t.preset.toLowerCase().slice(0,6))<0?x+" hoy es «"+p.name+"»":null}).filter(Boolean);
-      if(mism.length)h+='<div style="font-size:12px;color:var(--coral)">Revisa: '+esc(mism.join(" · "))+'</div>';
+      h+=revisarSlots(t,i);
       if(sl.length){
         h+='<div style="font-size:12px;color:var(--muted)">Un toque carga la parte en el pedal · dos toques abren Pedal</div><div class="parts">'+
           t.slots.map((x,k)=>x?'<button class="btn '+(x===cs?'btn-primary':'btn-ghost')+'" data-load="'+esc(x)+'" aria-pressed="'+(x===cs)+'"><span class="mono" style="font-size:11px;opacity:.75">'+letra(k)+'</span>'+esc(x)+'</button>':'').join("")+'</div>';
@@ -1109,7 +1258,6 @@ function vTemas(){
             pc.blocks.map(x=>'<button class="minib'+(x.on?' on':'')+'" data-mtog="'+x.mod+'" aria-pressed="'+x.on+'" aria-label="'+x.mod+' '+(x.on?'encendido':'apagado')+'">'+x.mod+'</button>').join("")+'</div>';
         }
       }
-      if(afvDe(t.afinacion)&&sl.length)h+='<button class="btn btn-ghost" style="min-height:42px" data-afvapply="'+i+'">'+ic('music',16)+'Afinación virtual '+esc(t.afinacion)+': poner Hammy en sus partes</button>';
       h+='<div style="display:flex;gap:8px"><button class="btn btn-ghost" style="flex:1;min-height:42px" data-edit="'+i+'">'+ic('edit',16)+'Editar canción</button>'+(PRESETS.length&&t.slots.includes(cs)?'<button class="btn btn-ghost" style="flex:1;min-height:42px" data-go="pedal">'+ic('pedal',16)+'Abrir Pedal</button>':'')+'</div></div>';
     }
     h+='</div>';
@@ -1119,15 +1267,56 @@ function vTemas(){
   return h;
 }
 
-function slotInput(k,v){return '<label class="slotin"><span class="mono">'+letra(k)+'</span><input aria-label="Slot parte '+letra(k)+'" data-slot="'+k+'" value="'+esc(v||"")+'" placeholder="00-A" autocapitalize="characters" autocomplete="off"></label>';}
+/* ── el preset se movió: proponer a dónde ── */
+const normN=s=>String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g," ").trim();
+function parecido(ref,nom){
+  const a=normN(ref),b=normN(nom);if(!a||!b)return false;
+  if(b.includes(a)||a.includes(b))return true;
+  const w=a.split(" ")[0];return w.length>=3&&b.split(" ").includes(w);
+}
+function revisarSlots(t,i){
+  if(!t.preset||!PRESETS.length)return "";
+  let h="";
+  t.slots.forEach((x,k)=>{
+    if(!x)return;const p=PRESETS.find(pp=>pp.slot===x);if(!p||parecido(t.preset,p.name))return;
+    const cand=PRESETS.filter(pp=>pp.slot!==x&&parecido(t.preset,pp.name)&&!t.slots.includes(pp.slot)).slice(0,4);
+    h+='<div class="fix"><div>Parte '+letra(k)+': <b>'+esc(x)+'</b> hoy es «'+esc(p.name)+'», no «'+esc(t.preset)+'».</div><div class="fixb">'+
+      cand.map(c=>'<button class="btn btn-ghost" data-migra="'+i+'|'+k+'|'+c.slot+'">Cambiar a '+esc(c.slot)+' «'+esc(c.name)+'»</button>').join("")+
+      '<button class="btn btn-ghost" data-refupd="'+i+'|'+k+'">Dejar '+esc(x)+' y usar «'+esc(p.name)+'» como referencia</button>'+
+      '</div>'+(cand.length?'':'<div style="font-size:12px;color:var(--muted)">No encontré otro preset llamado parecido a «'+esc(t.preset)+'» en el pedal.</div>')+'</div>';
+  });
+  return h;
+}
+function autoArtista(v){
+  const sh=$("sheet"),n=normN(v);if(!sh||!n)return;
+  const del=TEMAS.filter(x=>normN(x.artista)===n);if(!del.length)return;
+  const moda=k=>{const c={};del.forEach(x=>{if(x[k])c[x[k]]=(c[x[k]]||0)+1});return Object.keys(c).sort((a,b)=>c[b]-c[a])[0]||""};
+  let hizo=[];
+  [["afinacion","afinación"],["preset","preset"]].forEach(([k,l])=>{const el=sh.querySelector('[data-f="'+k+'"]');const m=moda(k);if(el&&!el.value.trim()&&m){el.value=m;hizo.push(l)}});
+  if(hizo.length)toast("Completé "+hizo.join(" y ")+" con lo que ya tienes de "+del[0].artista);
+}
+function autoSlot(el){
+  const v=normSlot(el.value,"");
+  if(!/^(0[1-9]|[1-5]\d|6[0-4])-[A-D]$/.test(v))return;
+  const p=PRESETS.find(x=>x.slot===v),pr=$("sheet").querySelector('[data-f="preset"]');
+  if(p&&pr&&!pr.value.trim()&&p.kind!=="vacio"){pr.value=p.name;toast("Preset de referencia: «"+p.name+"»")}
+}
+
+function slotInput(k,v){return '<label class="slotin"><span class="mono">'+letra(k)+'</span><input list="dlSlots" inputmode="text" aria-label="Slot parte '+letra(k)+'" data-slot="'+k+'" value="'+esc(v||"")+'" placeholder="00-A" autocapitalize="characters" autocomplete="off"></label>';}
 function hojaTema(i){
   const t=i>=0?TEMAS[i]:{id:"",artista:"",cancion:"",afinacion:"",preset:"",slots:["","","",""],obs:"",tags:""};
   const n=Math.max(4,t.slots.length);
-  const f=(k,l,v,ph)=>'<label class="field">'+l+'<input data-f="'+k+'" value="'+esc(v)+'" placeholder="'+(ph||"")+'"></label>';
+  const f=(k,l,v,ph,dl)=>'<label class="field">'+l+'<input data-f="'+k+'" value="'+esc(v)+'" placeholder="'+(ph||"")+'"'+(dl?' list="'+dl+'" autocomplete="off"':'')+'></label>';
+  const uniq=a=>[...new Set(a.map(x=>String(x||"").trim()).filter(Boolean))].sort((x,y)=>x.localeCompare(y,"es",{sensitivity:"base"}));
+  const opt=v=>'<option value="'+esc(v)+'">';
+  const dls='<datalist id="dlArt">'+uniq(TEMAS.map(x=>x.artista)).map(opt).join("")+'</datalist>'+
+    '<datalist id="dlAf">'+[...new Set([...AFINACIONES,...TEMAS.map(x=>x.afinacion).filter(Boolean)])].sort((a,b)=>tRank(a)-tRank(b)).map(opt).join("")+'</datalist>'+
+    '<datalist id="dlPre">'+uniq([...TEMAS.map(x=>x.preset),...PRESETS.filter(p=>p.kind!=="vacio").map(p=>p.name)]).map(opt).join("")+'</datalist>'+
+    '<datalist id="dlSlots">'+SLOTS.slice(0,256).map(s=>{const p=PRESETS.find(x=>x.slot===s);return '<option value="'+s+'"'+(p?' label="'+esc(p.name)+'"':'')+'>'}).join("")+'</datalist>';
   $("sheet").innerHTML='<div class="sheet-bg" data-act="sheetClose"><div class="sheet" role="dialog" aria-modal="true" aria-label="'+(i>=0?'Editar':'Nueva')+' canción">'+
     '<div style="font-size:18px;font-weight:700">'+(i>=0?'Editar canción':'Nueva canción')+'</div>'+
-    f("cancion","Canción",t.cancion,"Ej. Duality")+f("artista","Artista",t.artista,"Ej. Slipknot")+
-    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">'+f("afinacion","Afinación",t.afinacion,"Drop B")+f("preset","Preset",t.preset,"Nombre de referencia")+'</div>'+
+    dls+f("cancion","Canción",t.cancion,"Ej. Duality")+f("artista","Artista",t.artista,"Ej. Slipknot","dlArt")+
+    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">'+f("afinacion","Afinación",t.afinacion,"Drop B","dlAf")+f("preset","Preset",t.preset,"Nombre de referencia","dlPre")+'</div>'+
     '<div class="field">Slots por parte (01-A a 64-D)<div class="slots" id="slotsBox">'+Array.from({length:n},(_,k)=>slotInput(k,t.slots[k])).join("")+'</div>'+
     '<button class="btn btn-ghost" style="min-height:40px" data-act="addPart">'+ic('plus',16)+'Agregar parte</button></div>'+
     '<label class="field">Nota<textarea data-f="obs" placeholder="Acordes, trastes, cuerdas al aire, efectos…">'+esc(t.obs)+'</textarea></label>'+
@@ -1147,22 +1336,364 @@ function guardarHoja(i){
   const t={id:i>=0?TEMAS[i].id:"T"+String(Date.now()).slice(-6),artista:g("artista"),cancion:g("cancion"),afinacion:g("afinacion"),preset:g("preset"),slots,obs:g("obs"),tags:g("tags")};
   if(i>=0)TEMAS[i]=t; else {TEMAS.push(t);S.open=TEMAS.length-1;S.shuf=null;}
   guardarTemas();sh.innerHTML="";
-  if(afvDe(t.afinacion)&&t.slots.some(s=>PRESETS.some(p=>p.slot===s))&&confirm("Tienes una afinación virtual para «"+t.afinacion+"». ¿Ponerla en los presets de esta canción?")){
-    const n=aplicarAfv(t.afinacion,t.slots);toast("Canción guardada · afinación aplicada a "+n+" preset(s)");}
-  else toast("Canción guardada");
+  toast("Canción guardada");
   render(true);
 }
+
+/* ═══ Afinación virtual ═════════════════════════════════════
+   El Hammy en PRE baja (o sube) todo respecto de la afinación real de la
+   guitarra. Las afinaciones se describen como semitonos desde Standard (E)
+   o desde Drop D, que es donde se parte para las drop. */
+const HAMMY=16777289;
+const NOTAS=["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
+const LATIN=["Do","Do#","Re","Re#","Mi","Fa","Fa#","Sol","Sol#","La","La#","Si"];
+let NOTAC="en";try{NOTAC=localStorage.getItem("rs_m_notac")||"en"}catch(e){}
+const nota=m=>(NOTAC==="lat"?LATIN:NOTAS)[((m%12)+12)%12];
+const notaOct=m=>nota(m)+(Math.floor(m/12)-1);
+const BASE_STD=[40,45,50,55,59,64], BASE_DROP=[38,45,50,55,59,64];
+const CAT_STD=[["Standard",0],["Standard D#",-1],["Standard D",-2],["Standard C#",-3],["Standard C",-4],["Standard B",-5]];
+const CAT_DROP=[["Drop D",0],["Drop C#",-1],["Drop C",-2],["Drop B",-3],["Drop A#",-4],["Drop A",-5]];
+/* "Drop Db", "Eb Standard", "Standard C#", "C standard"… → {drop, semis} */
+function parseAf(s){
+  let n=String(s||"").toLowerCase().replace(/♭/g,"b").replace(/♯/g,"#").replace(/\s+/g," ").trim();
+  if(!n)return null;
+  const pc=(l,acc)=>{let k={c:0,d:2,e:4,f:5,g:7,a:9,b:11}[l];if(acc==="#")k++;if(acc==="b")k--;return(k+12)%12};
+  const rel=(desde,k)=>{const d=(desde-k+12)%12;return d<=6?-d:12-d};
+  let m=n.match(/^drop ?([a-g])([#b]?)$/);if(m)return{drop:true,semis:rel(2,pc(m[1],m[2]))};
+  if(/^(standard|std|estandar|estándar|e standard|standard e)$/.test(n))return{drop:false,semis:0};
+  m=n.match(/^(?:standard|std|estandar|estándar) ?([a-g])([#b]?)$/)||n.match(/^([a-g])([#b]?) ?(?:standard|std|estandar|estándar)$/);
+  if(m)return{drop:false,semis:rel(4,pc(m[1],m[2]))};
+  return null;
+}
+const mismaAf=(a,b)=>{const x=parseAf(a),y=parseAf(b);return !!(x&&y&&x.drop===y.drop&&x.semis===y.semis)};
+const cuerdas=af=>{const x=parseAf(af);return x?(x.drop?BASE_DROP:BASE_STD).map(m=>m+x.semis):null};
+/* instrumentos: cuerdas al aire de grave a agudo (MIDI) y la cuerda "E" que
+   da nombre a las afinaciones Standard */
+const INSTRUMENTOS={
+  g6:{n:"Guitarra 6 cuerdas",s:[40,45,50,55,59,64],e:40},
+  g7:{n:"Guitarra 7 cuerdas",s:[35,40,45,50,55,59,64],e:40},
+  g8:{n:"Guitarra 8 cuerdas",s:[30,35,40,45,50,55,59,64],e:40},
+  b4:{n:"Bajo 4 cuerdas",s:[28,33,38,43],e:28},
+  b5:{n:"Bajo 5 cuerdas",s:[23,28,33,38,43],e:28},
+  b6:{n:"Bajo 6 cuerdas",s:[23,28,33,38,43,48],e:28}};
+let INS="g6";try{INS=localStorage.getItem("rs_m_ins")||"g6";if(!INSTRUMENTOS[INS])INS="g6"}catch(e){}
+const insDef=()=>INSTRUMENTOS[INS];
+/* drop = la cuerda más grave un tono abajo */
+const afCuerdas=(fam,sm)=>insDef().s.map((m,i)=>m+sm-(fam==="drop"&&i===0?2:0));
+const afNombre=(fam,sm)=>fam==="drop"?"Drop "+nota(insDef().s[0]-2+sm):(sm===0?"Standard":"Standard "+nota(insDef().e+sm));
+const afBase=fam=>afNombre(fam,0);
+const insSelect=id=>'<select id="'+id+'" class="selectfull insel" aria-label="Instrumento">'+Object.keys(INSTRUMENTOS).map(k=>'<option value="'+k+'"'+(k===INS?' selected':'')+'>'+INSTRUMENTOS[k].n+'</option>').join("")+'</select>';
+const ordinal=(n,i)=>(n-i)+"ª";
+const cuerdasTxt=af=>{const c=cuerdas(af);return c?c.map(nota).join(" – "):""};
+const semisTxt=s=>s===0?"base":(s<0?"−"+(-s):"+"+s)+" st";
+
+/* calibración del Hammy por semitonos: una sola tabla sirve para Standard y
+   para Drop (Standard C# y Drop B bajan lo mismo: 3 semitonos) */
+const FILAS=[0,-1,-2,-3,-4,-5,-6,-7];
+const NOM_STD={0:"Standard","-1":"Standard D#","-2":"Standard D","-3":"Standard C#","-4":"Standard C","-5":"Standard B","-6":"Standard A#","-7":"Standard A"};
+const NOM_DROP={0:"Drop D","-1":"Drop C#","-2":"Drop C","-3":"Drop B","-4":"Drop A#","-5":"Drop A","-6":"Drop G#","-7":"Drop G"};
+let HB=null;
+try{const s=localStorage.getItem("rs_hammy2");if(s)HB=JSON.parse(s)}catch(e){}
+if(!HB||typeof HB!=="object"||Array.isArray(HB))HB={"-3":[1,0,50,8],"-4":[1,0,50,15],"-5":[1,0,50,22],"-7":[1,0,50,40]};
+const guardarHB=()=>{try{localStorage.setItem("rs_hammy2",JSON.stringify(HB))}catch(e){}};
+const hbDe=af=>{const x=parseAf(af);return x&&x.semis<0&&HB[String(x.semis)]?{semis:x.semis,vals:HB[String(x.semis)]}:null};
+const hbTxt=v=>{const p=FX[String(HAMMY)].p;return p[0].o[Math.round(v[0])]+" · Harmony "+p[1].o[Math.round(v[1])]+" · Vol "+fmt(v[2])+" · Position "+fmt(v[3])};
+
+const preEnUso=p=>{const b=p&&p.blocks.find(x=>x.mod==="PRE");return b&&b.on&&b.code!==HAMMY?(b.fx?b.fx.n:"otro efecto"):null};
+/* pone el Hammy en el PRE; devuelve true si el cambio se oye recién al guardar */
+function ponerHammy(p,vals){
+  const b=p.blocks.find(x=>x.mod==="PRE");if(!b)return false;
+  const era=b.code,fx=FX[String(HAMMY)];
+  b.code=HAMMY;b.fx=fx;const v=new Array(15).fill(0);fx.p.forEach(d=>v[d.i]=d.d);vals.forEach((x,k)=>v[k]=x);b.vals=v;b.on=true;p.dirty=true;
+  if(esActivo(p))enviarBloqueVivo(p,"PRE");
+  return false;
+}
+const libre=()=>PRESETS.find(x=>x.kind==="vacio"&&!x.dirty);
+function copiarA(p,q){
+  const n=parse(buildPrst(p).buffer.slice(0),q.slot+"_"+(p.name||"copia").replace(/[^A-Za-z0-9]+/g,"_")+".prst");
+  n.slot=q.slot;n.rawOrig=q.raw;n.dirty=true;
+  const i=PRESETS.indexOf(q);PRESETS[i]=n;return i;
+}
+/* El pedal no tiene (o no conocemos) un mensaje para cambiar el modelo de un
+   bloque en vivo: solo perillas y encendido. Por eso, cuando el PRE no tenía
+   Hammy, para oírlo hay que escribir ese preset en el pedal. Después, mover
+   la Position sí suena al instante. */
+let DESHACER=null;
+function guardarUno(p,cb){
+  if(!USB.on){cb&&cb(false);return}
+  if(malos(p).length){alert("El preset tiene un modelo fuera de su bloque: "+malos(p).join(", "));cb&&cb(false);return}
+  const slot=idxSlot(p.slot),nuevo=buildPrst(p),ms=msgGuardar(nuevo,slot);let j=0;
+  usbPintar("Escribiendo "+p.slot+" en el pedal…");CORTA=false;
+  const fin=ok=>{usbPintar();cb&&cb(ok)};
+  const iv=setInterval(()=>{
+    if(j<ms.length){if(!usbEnviar(ms[j])){clearInterval(iv);fin(false)}j++;return}
+    clearInterval(iv);
+    setTimeout(()=>{
+      delete RX[slot];ARM=null;let esp=0;
+      const rev=setInterval(()=>{
+        if(RX[slot]!==undefined){
+          clearInterval(rev);
+          const des=RX[slot],e2=nuevo.slice();
+          e2[52]=des[52];e2[144]=des[144];
+          for(let q=0;q<8;q++){e2[1120+q*12+6]=des[1120+q*12+6];e2[1120+q*12+7]=des[1120+q*12+7]}
+          let s3=0;for(let q=0;q<0x4C6;q++)s3=(s3+e2[q])&0xFFFF;e2[0x4C6]=(s3>>8)&0xFF;e2[0x4C7]=s3&0xFF;
+          let dif=0;for(let q=46;q<1216;q++)if(e2[q]!==des[q])dif++;
+          if(dif){alert("No se pudo verificar "+p.slot+": "+dif+" byte(s) distintos.");fin(false);return}
+          p.raw=des.buffer.slice(0);delete p.rawOrig;p.dirty=false;p.volTocado=false;p.modPend=null;
+          irAlPreset(p.slot);fin(true);return;
+        }
+        if(esp===0)usbEnviar(pedirPreset(slot));
+        if(++esp>20){clearInterval(rev);alert("No se pudo verificar "+p.slot+": el pedal no respondió.");fin(false)}
+      },30);
+    },350);
+  },40);
+}
+function aplicarAqui(semis,modo){
+  const vals=HB[String(semis)];if(!vals){toast("Esa afinación no tiene Position calibrada");return}
+  let p=PRESETS[CUR];if(!p)return;
+  $("sheet").innerHTML="";
+  if(modo==="copia"){
+    const q=libre();if(!q){toast("No hay slots libres");return}
+    CUR=copiarA(p,q);p=PRESETS[CUR];ponerHammy(p,vals);render(true);
+    if(!USB.on){toast("Copia en "+p.slot+" con Hammy · conecta el pedal o descarga los cambios");return}
+    /* la copia tiene todos los bloques del original: se escribe en el slot libre para que suene completa */
+    guardarUno(p,ok=>{render(true);if(ok)toast("Copia en "+p.slot+" sonando con Hammy "+semisTxt(semis)+" · mueve POS para afinar")});
+    return;
+  }
+  if(modo==="libre"){const q=libre();if(!q){toast("No hay slots libres");return}CUR=PRESETS.indexOf(q);p=q;}
+  const enVivo=USB.on;
+  if(enVivo&&!esActivo(p)){irAlPreset(p.slot);setTimeout(()=>{ponerHammy(p,vals);render(true)},300);}
+  else ponerHammy(p,vals);
+  render(true);
+  toast("Hammy "+semisTxt(semis)+" en "+p.slot+(enVivo?" · ya suena · mueve POS para afinar":"")+" · falta guardar en el pedal");
+}
+function restaurar(){
+  if(!DESHACER)return;const k=PRESETS.findIndex(x=>x.slot===DESHACER.slot);if(k<0)return;
+  if(!confirm("¿Volver a escribir "+DESHACER.slot+" como estaba antes del Hammy?"))return;
+  const n=parse(DESHACER.raw,PRESETS[k].file);n.slot=DESHACER.slot;n.dirty=true;PRESETS[k]=n;CUR=k;
+  guardarUno(n,ok=>{if(ok){DESHACER=null;toast(n.slot+" restaurado")}render(true)});
+}
+function pedirAplicar(semis,modo){
+  const p=PRESETS[CUR];if(!p){toast("Conecta el pedal o abre tus .prst");return}
+  const uso=preEnUso(p);
+  if(modo!=="aqui"||!uso){aplicarAqui(semis,modo);return}
+  if(confirm(p.slot+" «"+p.name+"» usa "+uso+" en el PRE. El Hammy lo reemplaza (puedes volver atrás con Descartar mientras no guardes). ¿Seguir?\n\n(Si prefieres probar sin perderlo, usa «En una copia».)"))aplicarAqui(semis,"aqui");
+}
+/* desde una canción: en todas sus partes cargadas */
+function hammyEnCancion(tm){
+  const h=hbDe(tm.afinacion);if(!h)return;
+  const ps=tm.slots.filter(Boolean).map(s=>PRESETS.find(p=>p.slot===s)).filter(Boolean);
+  if(!ps.length){toast("Los slots de esta canción no están cargados");return}
+  const usados=ps.filter(preEnUso);
+  if(usados.length&&!confirm("Se reemplaza el PRE en:\n\n"+usados.map(p=>"  "+p.slot+" «"+p.name+"» ("+preEnUso(p)+")").join("\n")+"\n\n¿Seguir?"))return;
+  ps.forEach(p=>ponerHammy(p,h.vals));render(true);toast("Hammy "+semisTxt(h.semis)+" en "+ps.length+" preset(s) · falta guardar en el pedal");
+}
+
+/* ── afinador: lee la entrada de audio del GP-200 por USB (o el micrófono) ── */
+const TUN={on:false,ac:null,st:null,an:null,buf:null,raf:0,dev:"",hist:[],k:0};
+async function afinadorOn(){
+  if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){toast("Este navegador no da acceso al audio");return}
+  const cons={audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}};
+  if(TUN.dev)cons.audio.deviceId={exact:TUN.dev};
+  try{
+    afinadorOff(true);
+    TUN.st=await navigator.mediaDevices.getUserMedia(cons);
+    if(!TUN.dev){
+      const ds=(await navigator.mediaDevices.enumerateDevices()).filter(d=>d.kind==="audioinput");
+      const gp=ds.find(d=>/gp-?200|valeton/i.test(d.label)),actual=TUN.st.getAudioTracks()[0];
+      if(gp&&actual&&!/gp-?200|valeton/i.test(actual.label||"")){TUN.st.getTracks().forEach(t=>t.stop());TUN.dev=gp.deviceId;return afinadorOn();}
+    }
+    TUN.ac=new (window.AudioContext||window.webkitAudioContext)();
+    const src=TUN.ac.createMediaStreamSource(TUN.st);
+    TUN.an=TUN.ac.createAnalyser();TUN.an.fftSize=2048;src.connect(TUN.an);
+    TUN.buf=new Float32Array(TUN.an.fftSize);TUN.on=true;TUN.hist=[];
+    hojaAfinador();afinadorDisp();bucle();
+  }catch(e){TUN.on=false;toast("Sin acceso al audio: "+e.message);hojaAfinador()}
+}
+function afinadorOff(silencio){
+  cancelAnimationFrame(TUN.raf);
+  if(TUN.st)TUN.st.getTracks().forEach(t=>t.stop());
+  if(TUN.ac)TUN.ac.close().catch(()=>{});
+  TUN.st=TUN.ac=TUN.an=null;TUN.on=false;
+  if(!silencio)$("sheet").innerHTML="";
+}
+async function afinadorDisp(){
+  const sel=$("tnDev");if(!sel)return;
+  const ds=(await navigator.mediaDevices.enumerateDevices()).filter(d=>d.kind==="audioinput"&&d.label);
+  const act=TUN.st&&TUN.st.getAudioTracks()[0];
+  sel.innerHTML=ds.map(d=>'<option value="'+esc(d.deviceId)+'"'+(act&&act.label===d.label?' selected':'')+'>'+esc(d.label)+'</option>').join("");
+  sel.style.display=ds.length>1?"":"none";
+  const lb=$("tnSrc");if(lb&&act)lb.textContent=/gp-?200|valeton/i.test(act.label)?"Entrada: GP-200 por USB (señal después del Hammy)":"Entrada: "+(act.label||"micrófono");
+}
+/* autocorrelación (ACF2+) acotada a guitarra/bajo: 30–1200 Hz */
+function tono(b,sr){
+  let N=b.length,rms=0;for(let i=0;i<N;i++)rms+=b[i]*b[i];rms=Math.sqrt(rms/N);
+  if(rms<0.008)return{f:-1,rms};
+  let r1=0,r2=N-1;const th=0.2;
+  for(let i=0;i<N/2;i++)if(Math.abs(b[i])<th){r1=i;break}
+  for(let i=1;i<N/2;i++)if(Math.abs(b[N-i])<th){r2=N-i;break}
+  const x=b.subarray(r1,r2);N=x.length;const L=Math.min(N,Math.ceil(sr/30)),c=new Float32Array(L);
+  for(let i=0;i<L;i++){let s=0;for(let j=0;j<N-i;j++)s+=x[j]*x[j+i];c[i]=s}
+  let d=0;while(d<L-1&&c[d]>c[d+1])d++;
+  let mx=-1,mp=-1;for(let i=d;i<L;i++)if(c[i]>mx){mx=c[i];mp=i}
+  if(mp<1||mp>=L-1)return{f:-1,rms};
+  const a=(c[mp-1]+c[mp+1]-2*c[mp])/2,bb=(c[mp+1]-c[mp-1])/2;const T=a?mp-bb/(2*a):mp;
+  return{f:sr/T,rms};
+}
+/* afinador estilo app: la cuerda objetivo de la afinación elegida, un círculo
+   que se pone verde al quedar afinada y una barra que se llena si la mantienes */
+const TNV={lock:-1,ok:[],hold:0,last:0,af:"",view:"circulo"};
+try{TNV.view=localStorage.getItem("rs_m_tnview")||"circulo"}catch(e){}
+/* vista arco: 21 segmentos de 5 cents, de ♭ (izquierda) a ♯ (derecha) */
+function arcoSVG(){
+  const cx=150,cy=150,R=118,p=a=>{const r=a*Math.PI/180;return (cx+R*Math.cos(r)).toFixed(1)+" "+(cy-R*Math.sin(r)).toFixed(1)};
+  let s='<svg class="tnarc" viewBox="0 0 300 190" role="img" aria-label="Indicador de afinación">';
+  for(let k=-10;k<=10;k++){const a=90-k*11;s+='<path data-seg="'+k+'" d="M'+p(a+3.6)+' A'+R+' '+R+' 0 0 1 '+p(a-3.6)+'"/>';}
+  s+='<path class="tnmark" d="M144 8 L156 8 L150 18 Z"/>'+
+     '<text x="34" y="158" class="tnfs">♭</text><text x="266" y="158" class="tnfs" text-anchor="end">♯</text>'+
+     '<text x="150" y="140" text-anchor="middle" class="tnbig"><tspan id="tnNota">—</tspan><tspan id="tnOct" class="tnoct" dy="14"></tspan></text></svg>';
+  return s;
+}
+function pintarArco(dif){
+  const kc=dif===null?null:Math.max(-10,Math.min(10,Math.round(dif/5)));
+  document.querySelectorAll("[data-seg]").forEach(el=>{const k=+el.dataset.seg,ak=Math.abs(k);
+    const on=kc!==null&&(k===0?Math.abs(kc)<=1:(kc<0?k<=0&&k>=kc:k>=0&&k<=kc));
+    el.setAttribute("class",on?(ak<=1?"s-ok":ak<=3?"s-am":ak<=6?"s-na":"s-ro"):"");});
+}
+const tnSel=()=>({fam:"std",sm:0});  /* por ahora solo Standard; la afinación virtual quedó fuera de esta versión */
+const tnAf=()=>{const s=tnSel();return afNombre(s.fam,s.sm)};
+const tnCuerdas=()=>{const s=tnSel();return afCuerdas(s.fam,s.sm)};
+function bucle(){
+  if(!TUN.on)return;
+  TUN.raf=requestAnimationFrame(bucle);
+  if((TUN.k++)%3)return;
+  TUN.an.getFloatTimeDomainData(TUN.buf);
+  const r=tono(TUN.buf,TUN.ac.sampleRate),lv=$("tnLvl");
+  if(lv)lv.style.width=Math.max(0,Math.min(100,(20*Math.log10(r.rms+1e-6)+60)/60*100))+"%";
+  const now=Date.now();
+  if(r.f<25||r.f>1400){
+    if(now-TNV.last>1500){const c=$("tnCirc");if(c)c.className="tncirc";const mg=$("tnMsg");if(mg){mg.textContent="Toca una cuerda";$("tnSub").textContent="";}if($("tnOct"))pintarArco(null);TNV.hold=0;pintarHold();}
+    return;
+  }
+  TNV.last=now;
+  TUN.hist.push(r.f);if(TUN.hist.length>5)TUN.hist.shift();
+  const f=[...TUN.hist].sort((a,b)=>a-b)[Math.floor(TUN.hist.length/2)];
+  const m=69+12*Math.log2(f/440),cs=tnCuerdas();
+  let idx=TNV.lock;
+  if(idx<0){idx=0;cs.forEach((x,i)=>{if(Math.abs(m-x)<Math.abs(m-cs[idx]))idx=i});}
+  const dif=Math.round((m-cs[idx])*100),ad=Math.abs(dif);
+  if(!$("tnMsg"))return;
+  const c=$("tnCirc");if(c)c.className="tncirc "+(ad<=5?"ok":(ad<=30?"cerca":"lejos"));
+  $("tnNota").textContent=nota(cs[idx]);
+  const oc=$("tnOct");if(oc){oc.textContent=Math.floor(cs[idx]/12)-1;pintarArco(dif);}
+  $("tnMsg").textContent=ad<=5?"Mantenlo ahí":(ad>100?(dif<0?"Sube bastante":"Baja bastante"):(dif<0?"Sube un poco":"Baja un poco"));
+  $("tnSub").textContent="suena "+notaOct(Math.round(m))+" · "+f.toFixed(1)+" Hz · "+(dif>0?"+":"")+dif+" cents";
+  const nd=$("tnNeedle");if(nd){nd.style.left=(50+Math.max(-50,Math.min(50,dif)))+"%";nd.style.background=ad<=5?"var(--ok)":"var(--accent)"}
+  document.querySelectorAll("[data-tnstr]").forEach(b=>{const i=+b.dataset.tnstr;b.classList.toggle("act",i===idx);b.classList.toggle("okd",!!TNV.ok[i]);});
+  if(ad<=5){TNV.hold=Math.min(24,TNV.hold+1);if(TNV.hold>=24&&!TNV.ok[idx]){TNV.ok[idx]=true;if(navigator.vibrate)navigator.vibrate(30);}}
+  else TNV.hold=Math.max(0,TNV.hold-2);
+  pintarHold();
+}
+/* mueve la Position de una fila y, si el preset que suena tiene Hammy, la aplica en vivo */
+function moverPos(sm,dlt){
+  const pp=PRESETS[CUR],b=pp&&pp.blocks.find(x=>x.mod==="PRE"&&x.code===HAMMY);let vivo=false;
+  /* sin calibrar: parte de lo que tiene el Hammy del preset actual */
+  const k=String(sm),v=HB[k]||(b?b.vals.slice(0,4):[1,0,50,0]);v[3]=Math.max(0,Math.min(100,(+v[3])+dlt));HB[k]=v;guardarHB();
+  if(b&&esActivo(pp)){for(let i=0;i<4;i++)b.vals[i]=v[i];pp.dirty=true;[0,1,2,3].forEach(i=>aplicarParam(pp,"PRE",i,b.vals[i]));if(!b.on){b.on=true;aplicarBloque(pp,"PRE",true)}vivo=true;}
+  return {pos:fmt(v[3]),vivo};
+}
+function pintarHold(){const h=$("tnHold");if(!h)return;[...h.children].forEach((d,i)=>d.classList.toggle("on",i<TNV.hold));}
+
+function vAfin(){
+  const p=PRESETS[CUR],sel=S.afSel===""?null:+S.afSel,fam=S.afFam==="drop"?"drop":"std";
+  const opt=(f,sm)=>{const v=HB[String(sm)],val=f+"|"+sm,on=sel===sm&&fam===f;
+    return '<option value="'+val+'"'+(on?' selected':'')+'>'+afNombre(f,sm)+(sm===0?' (base)':' · '+sm+' st · '+(v?'Pos '+fmt(v[3]):'sin calibrar'))+'</option>'};
+  let x='<div class="vtitle">Afinación virtual</div>'+
+  '<div class="afsel" style="margin-bottom:8px">'+insSelect("afIns")+'</div>'+
+  '<details class="help" style="margin:0 16px 10px"><summary>Cómo funciona</summary><div>Usa el <b>Hammy del módulo PRE</b> para bajar la afinación sin tocar las clavijas. Con la guitarra en Standard obtienes las afinaciones Standard; con la guitarra en Drop D (6ª cuerda un tono abajo), las Drop. Standard C# y Drop B bajan lo mismo (3 semitonos), así que comparten Position.</div></details>'+
+  '<div class="afsel"><label class="sr" for="afSelect">Afinación</label><select id="afSelect" class="selectfull"><option value="">Elige una afinación…</option>'+
+    '<optgroup label="Instrumento en '+afBase("std")+'">'+FILAS.map(sm=>opt("std",sm)).join("")+'</optgroup>'+
+    '<optgroup label="Instrumento en '+afBase("drop")+'">'+FILAS.map(sm=>opt("drop",sm)).join("")+'</optgroup></select>'+
+    '<button class="sq" data-notac="'+(NOTAC==="en"?"lat":"en")+'" aria-label="Cambiar notación" style="width:auto;padding:0 10px;font-size:13px;font-weight:600">'+(NOTAC==="en"?"E→Mi":"Mi→E")+'</button></div>';
+  if(sel===null)return x;
+  const v=HB[String(sel)],cs=afCuerdas(fam,sel),base=afBase(fam);
+  x+='<div class="card" style="margin-top:12px;padding:14px 16px;display:flex;flex-direction:column;gap:12px">'+
+    '<div class="cuerdas" style="grid-template-columns:repeat('+cs.length+',minmax(0,1fr))">'+cs.map((m,i)=>'<span><small>'+ordinal(cs.length,i)+'</small><b class="mono">'+nota(m)+'</b></span>').join("")+'</div>';
+  if(sel===0)return x+'<div style="font-size:13px;color:var(--muted)">Es la afinación base: no necesita Hammy.</div></div>';
+  x+='<div class="hbrow"><span style="flex:1"><span style="display:block;font-size:13px;font-weight:600">Hammy · baja '+(-sel)+' semitono'+(sel===-1?'':'s')+'</span><span class="mono" style="font-size:11px;color:var(--muted)">'+(v?esc(hbTxt(v)):'−1 Oct · sin Position calibrada')+'</span></span>'+
+      '<span class="volc" style="margin:0"><span class="vl">POS</span><button data-hbpos="-1" aria-label="Bajar Position">'+ic('minus',16)+'</button><b class="mono">'+(v?fmt(v[3]):'—')+'</b><button data-hbpos="1" aria-label="Subir Position">'+ic('plus',16)+'</button></span></div>';
+  if(!p)return x+'<div style="font-size:13px;color:var(--muted)">Conecta el pedal o abre tus .prst para aplicarlo.</div></div>';
+  const dest=S.afDest&&PRESETS.some(q=>q.slot===S.afDest)?S.afDest:p.slot,otro=dest!==p.slot,uso=preEnUso(p);
+  const libres=PRESETS.filter(q=>q.kind==="vacio"&&q.slot!==p.slot),ocup=PRESETS.filter(q=>q.kind!=="vacio"&&q.slot!==p.slot);
+  x+='<div class="paso"><span class="pn">1</span><span>Afina el instrumento en <b>'+base+'</b> ('+afCuerdas(fam,0).map(nota).join(" ")+').</span></div>'+
+    '<div class="paso"><span class="pn">2</span><span style="flex:1;display:flex;flex-direction:column;gap:8px">Dónde poner el Hammy'+
+      '<select id="afDest" class="selectfull"><option value="'+esc(p.slot)+'"'+(otro?'':' selected')+'>Preset actual · '+esc(p.slot)+' «'+esc(p.name)+'»</option>'+
+        (libres.length?'<optgroup label="Slots libres">'+libres.map(q=>'<option value="'+q.slot+'"'+(q.slot===dest?' selected':'')+'>'+q.slot+' · libre</option>').join("")+'</optgroup>':'')+
+        '<optgroup label="Otros slots (se reemplazan)">'+ocup.map(q=>'<option value="'+q.slot+'"'+(q.slot===dest?' selected':'')+'>'+q.slot+' · '+esc(q.name)+'</option>').join("")+'</optgroup></select>'+
+      (otro?'<div class="seg" style="margin:0" role="group" aria-label="Partir de"><button data-afbase="copia" aria-pressed="'+(S.afBase!=="vacio")+'">Copia de '+esc(p.slot)+'</button><button data-afbase="vacio" aria-pressed="'+(S.afBase==="vacio")+'">Preset vacío</button></div>':'')+
+      '<span style="font-size:12px;color:var(--muted)">'+(otro?(PRESETS.find(q=>q.slot===dest).kind==="vacio"?'Se escribe en '+dest+' para que suene.':'Se reemplaza «'+esc(PRESETS.find(q=>q.slot===dest).name)+'» en '+dest+'.'):(uso?'El PRE tiene '+esc(uso)+' y se reemplaza (Descartar lo recupera).':'El PRE está libre.'))+'</span>'+
+      '<div class="fila2"><button class="btn btn-primary" data-act="afAplicar"'+(v?'':' disabled')+'>'+ic('play',16)+'Aplicar en '+esc(dest)+'</button>'+
+      '<button class="btn btn-ghost" data-act="afIrPedal">'+ic('pedal',16)+'Ir a Pedal · '+esc(dest)+'</button></div></span></div>'+
+    '<div class="paso"><span class="pn">3</span><span style="flex:1;display:flex;flex-direction:column;gap:8px">Comprueba que quedó en <b>'+afNombre(fam,sel)+'</b>: abre el afinador, toca la cuerda más grave al aire (debe marcar <b>'+nota(cs[0])+'</b>) y corrige con <b>− POS +</b> hasta que quede verde. Ese valor queda guardado para esta afinación.'+
+      '<div class="fila2"><button class="btn btn-primary" data-act="afTuner">'+ic('fork',16)+'Abrir afinador</button>'+
+      '<button class="btn btn-ghost" data-act="saveAll"'+(dirtyN()?'':' disabled')+'>'+ic('save',16)+'Guardar en pedal</button></div></span></div>';
+  if(expDe(p,"PRE",3).length&&p.blocks.find(b=>b.mod==="PRE"&&b.code===HAMMY))x+=expAviso(p,p.blocks.find(b=>b.mod==="PRE"),FX[String(HAMMY)].p[3]);
+  if(p.blocks.find(b=>b.mod==="PRE"&&b.code===HAMMY))x+='<button class="btn btn-ghost" style="min-height:40px;font-size:13px" data-act="hbUpd">Tomar la Position del Hammy de '+esc(p.slot)+' ('+fmt(p.blocks.find(b=>b.mod==="PRE").vals[3])+')</button>';
+  return x+'</div>';
+}
+/* aplicar en otro slot: copia del actual o preset vacío, y se escribe para que suene */
+function aplicarEn(semis,dest,base){
+  const vals=HB[String(semis)];if(!vals){toast("Esa afinación no tiene Position calibrada");return}
+  const p=PRESETS[CUR];if(!p)return;
+  if(dest===p.slot){pedirAplicar(semis,"aqui");return}
+  const q=PRESETS.find(x=>x.slot===dest);if(!q)return;
+  if(q.kind!=="vacio"&&!confirm(dest+" «"+q.name+"» se reemplaza. ¿Seguir?"))return;
+  const src=base==="vacio"?parse(b64buf(BLANK_B64),dest+".prst"):p;
+  const k=copiarA(src,q),n=PRESETS[k];CUR=k;S.afDest=dest;
+  ponerHammy(n,vals);render(true);
+  if(!USB.on){toast("Hammy en "+dest+" · conecta el pedal o descarga los cambios");return}
+  guardarUno(n,ok=>{render(true);if(ok)toast(dest+" sonando con Hammy "+semisTxt(semis)+" · mueve POS para afinar")});
+}
+function hojaAfinador(){
+  const cs=tnCuerdas(),sl=tnSel(),cur=sl.fam+"|"+sl.sm;
+  const op=f=>FILAS.map(sm=>'<option value="'+f+'|'+sm+'"'+((f+"|"+sm)===cur?' selected':'')+'>'+afNombre(f,sm)+'</option>').join("");
+  let x='<div class="sheet-bg" data-act="sheetClose"><div class="sheet tnsheet" role="dialog" aria-modal="true" aria-label="Afinador">'+
+    '<div class="tnhead"><button class="sq" data-act="sheetClose" aria-label="Cerrar afinador">'+ic('chevL',18)+'</button>'+
+    '<div class="tntit">Afinador · Standard</div>'+
+    '<div class="tnview" role="group" aria-label="Vista del afinador"><button data-tnview="circulo" aria-pressed="'+(TNV.view!=="arco")+'" aria-label="Vista círculo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg></button><button data-tnview="arco" aria-pressed="'+(TNV.view==="arco")+'" aria-label="Vista arco"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 17a8 8 0 0116 0"/></svg></button></div></div>';
+  if(TUN.on){
+    x+=(TNV.view==="arco"
+      ?arcoSVG()+'<div class="tnmsg" id="tnMsg" aria-live="polite" style="font-size:18px;font-weight:500;color:var(--muted)">Toca una cuerda</div><div class="tnsub mono" id="tnSub"></div>'
+      :'<div class="tnmsg" id="tnMsg" aria-live="polite">Toca una cuerda</div>'+
+       '<div class="tncirc" id="tnCirc"><span id="tnNota">'+nota(cs[0])+'</span></div>'+
+       '<div class="tnsub mono" id="tnSub"></div>'+
+       '<div class="tnbar"><span class="tnmid"></span><span id="tnNeedle" class="tnneedle"></span></div>')+
+      '<div class="tnins">'+insSelect("tnIns")+'</div><div class="tnstrs" style="grid-template-columns:repeat('+cs.length+',minmax(0,1fr))">'+cs.map((m,i)=>'<button data-tnstr="'+i+'" class="'+(TNV.lock===i?'lock ':'')+(TNV.ok[i]?'okd':'')+'" aria-label="Cuerda '+ordinal(cs.length,i)+', '+notaOct(m)+(TNV.lock===i?', fija':'')+'">'+nota(m)+'<small>'+ordinal(cs.length,i)+'</small></button>').join("")+'</div>'+
+      (sl.sm<0?(()=>{const v=HB[String(sl.sm)],pp=PRESETS[CUR],viv=!!(pp&&esActivo(pp)&&pp.blocks.find(b=>b.mod==="PRE"&&b.code===HAMMY));
+        return '<div class="tnpos"><span><b>Hammy · '+sl.sm+' st</b><small id="tnPosNota">'+(viv?'suena al instante':'aplica primero el Hammy en un preset para oírlo')+'</small></span>'+
+          '<span class="volc" style="margin:0"><span class="vl">POS</span><button data-tnpos="-1" aria-label="Bajar Position">'+ic('minus',16)+'</button><b class="mono" id="tnPos">'+(v?fmt(v[3]):(viv?fmt(pp.blocks.find(b=>b.mod==="PRE").vals[3]):'—'))+'</b><button data-tnpos="1" aria-label="Subir Position">'+ic('plus',16)+'</button></span></div>'})():'')+
+      '<div class="tnhint">'+(TNV.lock>=0?'Cuerda '+ordinal(cs.length,TNV.lock)+' fija · tócala de nuevo para volver a automático':'Automático · toca una cuerda de la fila para fijarla')+'</div>'+
+      '<div class="tnhold" id="tnHold" aria-hidden="true">'+'<i></i>'.repeat(24)+'</div>'+
+      '<div class="bar" style="height:3px"><i id="tnLvl" style="width:0;background:var(--ok)"></i></div>'+
+      '<div id="tnSrc" style="font-size:12px;color:var(--muted)"></div><select id="tnDev" class="selectfull" style="display:none" aria-label="Entrada de audio"></select>';
+  }else{
+    x+='<div style="font-size:14px;color:var(--muted);line-height:1.5">Lee el audio del GP-200 por USB, así que mide lo que sale <b>después</b> de los efectos (incluido el Hammy). Si el pedal no aparece como entrada, usa el micrófono del teléfono.</div>'+
+      '<button class="btn btn-primary" data-act="tunerOn">'+ic('fork',18)+'Empezar</button>';
+  }
+  $("sheet").innerHTML=x+'</div></div>';
+  pintarHold();
+}
+
 
 function vAyuda(){
   const sec=(t,body,open)=>'<details class="help"'+(open?' open':'')+'><summary>'+t+'</summary><div>'+body+'</div></details>';
   return '<h1>Ayuda</h1><div class="sub">Cómo usar RigSheet en el teléfono</div><div style="height:14px"></div>'+
-  sec("Conectar el pedal",'<p>Necesitas Chrome en Android (o Chrome/Edge en el computador) y un cable USB; en el teléfono, con adaptador OTG. Enciende el pedal, toca <b>Conectar</b> y acepta el permiso MIDI. RigSheet trae los 256 presets en unos segundos.</p><p>En iPhone el navegador no tiene Web MIDI: puedes abrir archivos .prst y descargar los cambios como ZIP, pero no hablar con el pedal.</p><p>Para que el permiso MIDI funcione, abre la página desde https (por ejemplo rigsheet.rocks) o desde el computador.</p>',true)+
-  sec("Aplicar no es guardar",'<p>Todo lo que mueves va al <b>búfer de edición</b>: suena al instante pero no queda en la memoria. Los presets tocados quedan marcados <b>Sin guardar</b>.</p><p><b>Guardar en pedal</b> escribe solo esos presets, ofrece descargar antes un respaldo y verifica cada slot leyéndolo de vuelta. <b>Descartar</b> devuelve el preset a como estaba y el pedal lo recarga.</p><p>Solo suena en vivo el preset que el pedal tiene cargado. El cambio de <b>modelo</b> de un bloque se oye después de guardar.</p>')+
-  sec("Afinación virtual",'<p>Si bajas la afinación con el Hammy (en PRE, o en WAH para no perder el PRE), guarda ese ajuste una vez: en Pedal abre el bloque con el Hammy y toca <b>Guardar como afinación virtual</b> y elige la afinación (Drop B, Eb Standard…).</p><p>Después, al guardar una canción con esa afinación, RigSheet ofrece ponerlo en sus presets; también hay un botón dentro de cada canción. Los cambios quedan como <b>Sin guardar</b> hasta que guardes en el pedal. Si el bloque tenía otro modelo, el Hammy se oye recién al guardar.</p>')+
+  sec("Conectar el pedal",'<p>El botón del teléfono, arriba, mantiene la pantalla encendida mientras RigSheet esté abierto (viene activado). Si cambias de app o bloqueas el teléfono, se vuelve a activar al regresar.</p><p>Necesitas Chrome en Android (o Chrome/Edge en el computador) y un cable USB; en el teléfono, con adaptador OTG. Enciende el pedal, toca <b>Conectar</b> y acepta el permiso MIDI. RigSheet trae los 256 presets en unos segundos.</p><p>En iPhone el navegador no tiene Web MIDI: puedes abrir archivos .prst y descargar los cambios como ZIP, pero no hablar con el pedal.</p><p>Para que el permiso MIDI funcione, abre la página desde https (por ejemplo rigsheet.rocks) o desde el computador.</p>',true)+
+  sec("Aplicar no es guardar",'<p>Todo lo que mueves va al <b>búfer de edición</b>: suena al instante pero no queda en la memoria. Los presets tocados quedan marcados <b>Sin guardar</b>.</p><p><b>Guardar</b> escribe solo esos presets, sin preguntas, y verifica cada slot leyéndolo de vuelta. Si quieres un respaldo, usa <b>Respaldo completo</b> en Inicio. <b>Descartar</b> devuelve el preset a como estaba y el pedal lo recarga.</p><p>Solo suena en vivo el preset que el pedal tiene cargado. Cambiar el <b>modelo</b> de un bloque también suena al instante.</p>')+
   sec("Pedal",'<p>Las flechas pasan al preset anterior o siguiente y el pedal cambia con ellas. Un toque en un módulo lo abre para editar; mantenerlo presionado lo enciende o apaga. Cada módulo muestra si está en ON u OFF.</p><p>En el panel eliges el modelo, lo enciendes con el interruptor y mueves sus perillas con los rangos reales del pedal. El EQ se muestra como ecualizador gráfico. Si una perilla tiene Sync activo, se elige en notas (1/4, 1/8D…).</p><p>Con <b>−</b> y <b>+</b> junto a VOL ajustas el volumen general del preset (mantén presionado para avanzar rápido). Se oye recién al guardar en el pedal.</p><p>Toca la etiqueta de autor y estilo para editar nombre, autor, estilo y la nota corta que guarda el pedal. La cadena se muestra en el orden real del preset; el último botón, <b>CTRL</b>, asigna qué módulos enciende el switch de control; con <b>Agregar CTRL</b> sumas más si usas switches externos. <b>VOL</b> es el Patch VOL del editor de Valeton (no el bloque VOL). El comentario queda guardado en este teléfono.</p>')+
   sec("Presets",'<p>La lupa de arriba busca desde cualquier vista y deja el preset cargado. La búsqueda revisa nombre, slot, autor, estilo, efecto, equipo modelado, comentario y las canciones del repertorio asociadas a cada slot. Los filtros muestran con autor, sin autor, libres, con cambios y con comentario.</p>')+
-  sec("Repertorio",'<p>Cada canción guarda afinación, preset de referencia, una nota y los slots de cada parte (A, B, C… sin límite: usa <b>Agregar parte</b>).</p><p>Abre una canción y <b>toca una parte</b> para cargarla en el pedal sin salir de la lista; ahí mismo puedes encender o apagar sus módulos. <b>Dos toques</b> seguidos sobre la parte te llevan a Pedal.</p><p>Ordena por canción, artista o al azar (vuelve a tocar Aleatorio para mezclar otra vez) y filtra por afinación.</p>')+
-  sec("Importar y exportar",'<p><b>Exportar todo</b> descarga un ZIP con los presets (incluidos los cambios sin guardar), tus comentarios (en el mismo formato JSON de la versión de escritorio y además en CSV), el repertorio y las afinaciones virtuales. <b>Importar comentarios</b> lee ese JSON, venga del teléfono o del escritorio, y lo suma a los que ya tienes.</p><p><b>Importar CSV</b> lee una planilla con las columnas ID, Artista, Canción, Afinación, Preset, Slot A, Slot B… (las que quieras), Obs y Etiquetas. Acepta punto y coma o coma. Si una celda de la columna B dice solo 12, se entiende 12-B. En Excel: Guardar como → CSV UTF-8.</p><p><b>Respaldo ZIP</b> descarga todos los presets como .prst; <b>Cambios ZIP</b>, solo los modificados. Los archivos llevan fecha y hora.</p>')+
+  sec("Repertorio",'<p>Cada canción guarda afinación, preset de referencia, una nota y los slots de cada parte (A, B, C… sin límite: usa <b>Agregar parte</b>).</p><p>Abre una canción y <b>toca una parte</b> para cargarla en el pedal sin salir de la lista; ahí mismo puedes encender o apagar sus módulos. <b>Dos toques</b> seguidos sobre la parte te llevan a Pedal.</p><p>El <b>preset de referencia</b> es el nombre que esperas en ese slot; no cambia nada en el pedal. Sirve para buscar y para avisarte si el slot ahora tiene otro preset: en ese caso RigSheet propone cambiar la parte al slot donde quedó tu preset, o adoptar el nombre nuevo.</p><p>Al crear una canción, los campos sugieren lo que ya tienes: artistas, afinaciones y presets. Si el artista ya existe, completa afinación y preset. En los slots, escribe el banco (31) y elige entre 31-A a 31-D con su nombre.</p><p>Ordena por canción, artista o al azar (vuelve a tocar Aleatorio para mezclar otra vez) y filtra por afinación.</p>')+
+  sec("Importar y exportar",'<p><b>Respaldo completo (ZIP)</b> descarga los presets (con los cambios sin guardar incluidos), tus comentarios en el formato de la versión de escritorio y en CSV, el repertorio y las afinaciones virtuales. <b>Importar comentarios</b> lee ese JSON, venga del teléfono o del escritorio.</p><p><b>Importar repertorio</b> lee una planilla CSV con las columnas ID, Artista, Canción, Afinación, Preset, Slot A, Slot B… (las que quieras), Obs y Etiquetas; en Excel: Guardar como → CSV UTF-8. Si una celda de la columna B dice solo 12, se entiende 12-B.</p><p>Sin pedal conectado, el botón <b>ZIP</b> de la vista Pedal descarga solo los presets modificados.</p>')+
   sec("Dónde quedan tus datos",'<p>Nada sale del teléfono. Los comentarios y el repertorio viven en este navegador: si borras sus datos se pierden. Exporta el repertorio de vez en cuando.</p>');
 }
 let TITULOS=false;try{TITULOS=localStorage.getItem("rs_m_titles")==="1"}catch(e){}
@@ -1193,7 +1724,7 @@ document.addEventListener("pointerdown",e=>{const b=e.target.closest("[data-blk]
 document.addEventListener("contextmenu",e=>{if(e.target.closest("[data-blk]"))e.preventDefault()});
 
 document.addEventListener("click",e=>{
-  if(e.target.classList&&e.target.classList.contains("sheet-bg")){$("sheet").innerHTML="";return}
+  if(e.target.classList&&e.target.classList.contains("sheet-bg")){if(TUN.on)afinadorOff(true);$("sheet").innerHTML="";return}
   const t=e.target.closest("button");if(!t)return;
   const d=t.dataset;
   if(t.id==="conn"){USB.on?usbDesconectar():usbConectar();return}
@@ -1201,15 +1732,35 @@ document.addEventListener("click",e=>{
   if(d.blk){if(lpFired){lpFired=false;return}SELB=d.blk;render(true);return}
   if(d.go){go(d.go);return}
   if(t.id==="btnBuscar"){hojaBuscar();return}
+  if(t.id==="btnTuner"){hojaAfinador();return}
+  if(t.id==="btnWake"){WAKE=!WAKE;try{localStorage.setItem("rs_m_wake",WAKE?"1":"0")}catch(e){}
+    if(WAKE){wakeOn().then(()=>toast(WL?"La pantalla no se apagará mientras RigSheet esté abierto":"El navegador no permitió mantener la pantalla encendida"))}else{wakeOff();toast("La pantalla vuelve a apagarse sola")}return}
   if(d.pick){elegirPreset(+d.pick);go("pedal");return}
   if(d.qpick){elegirPreset(+d.qpick);$("sheet").innerHTML="";if(route()!=="pedal")go("pedal");else render();return}
   if(d.ctrl!==undefined){const p=PRESETS[CUR];if(p){const c=+d.ctrl,k=+d.bit;p.ctrl[c]=(p.ctrl[c]>>k&1)?(p.ctrl[c]&~(1<<k))>>>0:(p.ctrl[c]|(1<<k))>>>0;p.dirty=true;render(true);}return}
   if(d.delafv){delete AFV[d.delafv];guardarAfv();hojaAfv();return}
+  if(d.tnview){TNV.view=d.tnview;try{localStorage.setItem("rs_m_tnview",TNV.view)}catch(e){}hojaAfinador();afinadorDisp();return}
+  if(d.tnstr!==undefined){const i=+d.tnstr;TNV.lock=TNV.lock===i?-1:i;TNV.hold=0;hojaAfinador();afinadorDisp();return}
+  if(d.afsel!==undefined){S.afSel=S.afSel===d.afsel?"":d.afsel;render(true);return}
+  if(d.afbase){S.afBase=d.afbase;render(true);return}
+  if(d.affam){S.afFam=d.affam;render(true);return}
+  if(d.afapply){pedirAplicar(+S.afSel,d.afapply);return}
+  if(d.afgo){const x=parseAf(d.afgo);if(x){S.afSel=String(x.semis);S.afFam=x.drop?"drop":"std";}go("afinacion");return}
+  if(d.tnpos){const r=moverPos(tnSel().sm,+d.tnpos);const el=$("tnPos");if(el)el.textContent=r.pos;const nt=$("tnPosNota");if(nt)nt.textContent=r.vivo?"suena al instante":"aplica primero el Hammy en un preset para oírlo";return}
+  if(d.hbpos){const k=String(S.afSel);const v=HB[k]||[1,0,50,0];v[3]=Math.max(0,Math.min(100,(+v[3])+(+d.hbpos)));HB[k]=v;guardarHB();
+    const pp=PRESETS[CUR],b=pp&&pp.blocks.find(x=>x.mod==="PRE"&&x.code===HAMMY);
+    if(b&&esActivo(pp)){b.vals[0]=v[0];b.vals[1]=v[1];b.vals[2]=v[2];b.vals[3]=v[3];pp.dirty=true;[0,1,2,3].forEach(k=>aplicarParam(pp,"PRE",k,b.vals[k]));if(!b.on){b.on=true;aplicarBloque(pp,"PRE",true)}}
+    else if(USB.on)toast("Para oírlo, primero aplica el Hammy en un preset (paso 2)");
+    render(true);return}
+  if(d.notac){NOTAC=d.notac;try{localStorage.setItem("rs_m_notac",NOTAC)}catch(e){}render(true);return}
+  if(d.hbsong!==undefined){hammyEnCancion(TEMAS[+d.hbsong]);return}
   if(d.afvapply!==undefined){const tm=TEMAS[+d.afvapply];const n=aplicarAfv(tm.afinacion,tm.slots);render(true);toast(n?"Afinación "+tm.afinacion+" aplicada a "+n+" preset(s). Guarda en el pedal para dejarla fija":"Esos slots no están cargados");return}
   if(d.pchip){S.pchip=d.pchip;render();return}
   if(d.tune){S.tune=d.tune;S.open=-1;render();return}
   if(d.song!==undefined){const i=+d.song;S.open=S.open===i?-1:i;render(true);return}
   if(d.load){cargarSlot(d.load);return}
+  if(d.migra){const [i,k,sn]=d.migra.split("|");const tm=TEMAS[+i];tm.slots[+k]=sn;guardarTemas();render(true);toast("Parte "+letra(+k)+" ahora usa "+sn);return}
+  if(d.refupd){const [i,k]=d.refupd.split("|");const tm=TEMAS[+i];const p=PRESETS.find(pp=>pp.slot===tm.slots[+k]);if(p){tm.preset=p.name;guardarTemas();render(true);toast("Referencia actualizada a «"+p.name+"»")}return}
   if(d.tsort){if(d.tsort==="aleatorio")S.shuf=null;S.tsort=d.tsort;render(true);return}
   if(d.mtog){const k=PRESETS.findIndex(pp=>pp.slot===curSlot());if(k>=0){CUR=k;toggleBloque(d.mtog);}return}
   if(d.edit!==undefined){hojaTema(+d.edit);return}
@@ -1228,6 +1779,7 @@ document.addEventListener("click",e=>{
     case "saveAll":usbGuardar();break;
     case "zipDirty":exportarZip(true);break;
     case "zipAll":exportarZip(false);break;
+    case "borrarCur":if(p&&confirm("¿Borrar "+p.slot+" «"+p.name+"»?"))borrarPreset(p);break;
     case "discardCur":if(p&&p.dirty&&confirm("¿Descartar los cambios de "+p.slot+"?")){descartar(p);render(true);toast("Cambios descartados");}break;
     case "discardAll":{const n=dirtyN();if(!n){toast("No hay cambios");break}if(confirm("¿Descartar los cambios de "+n+" preset(s)?")){PRESETS.filter(x=>x.dirty).forEach(descartar);render();toast("Cambios descartados");}break}
     case "noteEdit":S.editNote=true;render(true);break;
@@ -1240,7 +1792,17 @@ document.addEventListener("click",e=>{
     case "addTema":hojaTema(-1);break;
     case "addPart":{const box=$("slotsBox"),k=box.querySelectorAll("[data-slot]").length;box.insertAdjacentHTML("beforeend",slotInput(k,""));box.querySelector('[data-slot="'+k+'"]').focus();break}
     case "metaEdit":S.editMeta=true;render(true);break;
-    case "afv":hojaAfv();break;
+    case "afv":go("afinacion");break;
+    case "tuner":TNV.ok=[];TNV.lock=-1;hojaAfinador();break;
+    case "tunerOn":afinadorOn();break;
+    case "restaurar":restaurar();break;
+    case "afIrPedal":{const dd=S.afDest||(p&&p.slot);const k=PRESETS.findIndex(q=>q.slot===dd);if(k>=0){elegirPreset(k);SELB="PRE";go("pedal")}break}
+    case "afTuner":{TNV.af=(S.afFam==="drop"?"drop":"std")+"|"+S.afSel;TNV.ok=[];TNV.lock=-1;hojaAfinador();break}
+    case "afAplicar":{const p0=PRESETS[CUR];aplicarEn(+S.afSel,S.afDest||(p0&&p0.slot),S.afBase||"copia");break}
+    case "escucharYa":{if(!p)break;const orig=p.raw;if(!esActivo(p))irAlPreset(p.slot);
+      guardarUno(p,ok=>{if(ok){if(!DESHACER||DESHACER.slot!==p.slot)DESHACER={slot:p.slot,raw:orig};p.modPend=null;toast(p.slot+" escrito · ya suena el modelo nuevo; sus perillas cambian en vivo");}render(true)});break}
+    case "tunerOff":afinadorOff();break;
+    case "hbUpd":{const b=p&&p.blocks.find(x=>x.mod==="PRE"&&x.code===HAMMY);if(!b||S.afSel==="")break;HB[String(S.afSel)]=b.vals.slice(0,4);guardarHB();render(true);toast("Calibrado "+afNombre("std",+S.afSel)+" / "+afNombre("drop",+S.afSel)+" con Position "+fmt(b.vals[3]));break}
     case "ctrlMas":if(p){CTRLMAS[p.slot]=ctrlVisibles(p)+1;render(true);}break;
     case "afvNew":hojaGuardarAfv();break;
     case "afvSave":{const nm=$("afvName").value.trim();const b=p&&p.blocks.find(x=>x.mod===SELB);if(!nm){toast("Escribe la afinación");break}
@@ -1248,7 +1810,7 @@ document.addEventListener("click",e=>{
     case "titles":TITULOS=!TITULOS;try{localStorage.setItem("rs_m_titles",TITULOS?"1":"0")}catch(e){}render(true);break;
     case "metaDone":S.editMeta=false;render(true);break;
     case "help":go("ayuda");break;
-    case "sheetClose":$("sheet").innerHTML="";break;
+    case "sheetClose":if(TUN.on)afinadorOff(true);$("sheet").innerHTML="";render(true);break;
     case "theme":{const h=document.documentElement,dk=getComputedStyle(h).colorScheme.indexOf("dark")>=0;h.setAttribute("data-theme",dk?"light":"dark");try{localStorage.setItem("rs_m_theme",dk?"light":"dark")}catch(e){}break}
   }
 });
@@ -1259,6 +1821,8 @@ document.addEventListener("input",e=>{
   if(t.id==="pq"){S.pq=t.value;render(true);return}
   if(t.id==="tq"){S.tq=t.value;S.open=-1;render(true);return}
   if(t.id==="qs"){pintarBuscar(t.value);return}
+  if(t.dataset.f==="artista"){autoArtista(t.value);return}
+  if(t.dataset.slot!==undefined){autoSlot(t);return}
   if(t.id==="mName"){const p=PRESETS[CUR];if(p){const viejo=getNote(p);const nv=t.value;if(viejo&&!NOTES[nv.trim()]){setNote(p,"");p.name=nv;setNote(p,viejo);}else p.name=nv;p.dirty=true;}return}
   if(t.id==="mNote"){const p=PRESETS[CUR];if(p){p.note=t.value;p.dirty=true;}return}
   if(t.id==="mAuthor"){const p=PRESETS[CUR];if(p){p.author=t.value;p.dirty=true;p.kind=p.author?"mio":(isEmpty(p)?"vacio":"sinfirmar");}return}
@@ -1268,6 +1832,11 @@ document.addEventListener("input",e=>{
 document.addEventListener("change",e=>{
   const t=e.target;
   if(t.id==="filePrst"){abrirPrst(t.files);t.value="";return}
+  if(t.id==="tnDev"){TUN.dev=t.value;afinadorOn();return}
+  if(t.id==="afSelect"){if(!t.value){S.afSel="";}else{const [f,sm]=t.value.split("|");S.afFam=f;S.afSel=sm;}render(true);return}
+  if(t.id==="afDest"){S.afDest=t.value;render(true);return}
+  if(t.id==="tnIns"||t.id==="afIns"){INS=t.value;try{localStorage.setItem("rs_m_ins",INS)}catch(e){}TNV.ok=[];TNV.lock=-1;TNV.hold=0;if(t.id==="tnIns"){hojaAfinador();afinadorDisp();}else render(true);return}
+  if(t.id==="tnAf"){TNV.af=t.value;TNV.lock=-1;TNV.ok=[];TNV.hold=0;hojaAfinador();afinadorDisp();return}
   if(t.id==="mStyle"){const p=PRESETS[CUR];if(p){p.style=+t.value;p.dirty=true;}return}
   if(t.id==="fileJson"){const f=t.files[0];t.value="";if(f)f.text().then(importarComentarios);return}
   if(t.id==="fileCsv"){const f=t.files[0];t.value="";if(f)f.text().then(importarTemas);return}
@@ -1276,8 +1845,8 @@ document.addEventListener("change",e=>{
     b.code=+t.value;b.fx=FX[String(b.code)]||null;b.vals=new Array(15).fill(0);
     if(b.fx)b.fx.p.forEach(d=>b.vals[d.i]=d.d);
     p.dirty=true;
-    if(esActivo(p)&&b.fx)b.fx.p.forEach(d=>aplicarParam(p,b.mod,d.i,b.vals[d.i]));
-    render(true);toast("El cambio de modelo se oye al guardar en el pedal");return;
+    if(esActivo(p))enviarBloqueVivo(p,b.mod);
+    render(true);return;
   }
   if(t.dataset.par!==undefined&&t.tagName==="SELECT")cambiarParam(t,true);
   if(t.dataset.par!==undefined&&t.type==="range")render(true);
@@ -1299,7 +1868,8 @@ function cambiarParam(t,redibujar){
   else{const badge=document.querySelector(".badge.dirty");if(!badge)render(true);}
 }
 
-window.addEventListener("hashchange",()=>{window.scrollTo(0,0);S.editNote=false;S.editMeta=false;render()});
+pintarWake();wakeOn();
+window.addEventListener("hashchange",()=>{if(TUN.on)afinadorOff(true);$("sheet").innerHTML="";window.scrollTo(0,0);S.editNote=false;S.editMeta=false;render()});
 window.addEventListener("beforeunload",e=>{if(dirtyN()){e.preventDefault();e.returnValue=""}});
 try{const th=localStorage.getItem("rs_m_theme");if(th)document.documentElement.setAttribute("data-theme",th)}catch(e){}
 render();
